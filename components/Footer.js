@@ -47,13 +47,11 @@ export default function Footer() {
     <footer className='bg-white'>
       <div className='flex justify-center'>
         <Link href='/'>
-          <a>
             <img
               src='/images/sbk-logo.svg'
               alt="Sam Klepper's Logo"
               className='h-14'
             />
-          </a>
         </Link>
       </div>
       <div className='max-w-7xl mx-auto pt-6 pb-12 px-4 overflow-hidden sm:px-6 lg:px-8'>
@@ -62,15 +60,12 @@ export default function Footer() {
           aria-label='Footer'>
           {navigation.main.map((item) => (
             <div key={item.name} className='px-5 py-2'>
-              <Link href={item.href}>
-                <a
-                  className={
-                    router.pathname === item.href
-                      ? 'text-md font-medium text-indigo-500'
-                      : 'text-md font-medium text-gray-500 hover:text-gray-900'
-                  }>
+              <Link href={item.href} className={
+                router.pathname === item.href
+                    ? 'text-md font-medium text-indigo-500'
+                    : 'text-md font-medium text-gray-500 hover:text-gray-900'
+              }>
                   {item.name}
-                </a>
               </Link>
             </div>
           ))}

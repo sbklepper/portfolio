@@ -25,7 +25,6 @@ export default function Header() {
               <div className='flex'>
                 <div className='flex-shrink-0 flex items-center'>
                   <Link href='/'>
-                    <a aria-label="Sam Klepper's logo">
                       <img
                         src='/images/sbk-logo.svg'
                         alt="Sam Klepper's logo"
@@ -34,10 +33,8 @@ export default function Header() {
                       {/* <p className='text-3xl text-transparent bg-clip-text bg-gradient-to-br from-teal-400 to-purple-600 font-extrabold tracking-wide lg:hidden'>
                         SbK
                       </p> */}
-                    </a>
                   </Link>
                   <Link href='/'>
-                    <a aria-label="Sam Klepper's logo">
                       <img
                         src='/images/sbk-logo.svg'
                         alt="Sam Klepper's logo"
@@ -46,63 +43,48 @@ export default function Header() {
                       {/* <p className='text-3xl text-transparent bg-clip-text bg-gradient-to-br from-teal-400 to-purple-600 font-extrabold tracking-wide hidden lg:block'>
                         SbK
                       </p> */}
-                    </a>
                   </Link>
                 </div>
                 <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <Link href='/'>
-                    <a
-                      className={
-                        router.pathname === '/'
-                          ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                          : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                      }
-                      onClick={newPathName}
-                      pathname={pathName}>
+                  <Link href='/' className={
+                    router.pathname === '/'
+                        ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                  } onClick={newPathName}
+                        pathname={pathName}>
                       Home
-                    </a>
                   </Link>
-                  <Link href='/about'>
-                    <a
-                      className={
-                        router.pathname === '/about'
-                          ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                          : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                      }
-                      onClick={newPathName}
-                      pathname={pathName}>
+                  <Link href='/about' className={
+                    router.pathname === '/about'
+                        ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                  } onClick={newPathName}
+                        pathname={pathName}>
                       About
-                    </a>
                   </Link>
-                  <Link href='/projects'>
-                    <a
-                      className={
-                        router.pathname === '/projects' ||
-                        router.asPath === `/projects/ultra-demo` ||
-                        router.asPath === `/projects/wig` ||
-                        router.asPath === `/projects/wgfps` ||
-                        router.asPath === `/projects/dds` ||
-                        router.asPath === `/projects/edge196`
-                          ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                          : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                      }
-                      onClick={newPathName}
-                      pathname={pathName}>
+                  <Link href='/projects' className={
+                    router.pathname === '/projects' ||
+                    router.asPath === `/projects/ultra-demo` ||
+                    router.asPath === `/projects/wig` ||
+                    router.asPath === `/projects/wgfps` ||
+                    router.asPath === `/projects/dds` ||
+                    router.asPath === `/projects/edge196`
+                        ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                  }
+                        onClick={newPathName}
+                        pathname={pathName}>
                       Projects
-                    </a>
                   </Link>
-                  <Link href='/contact'>
-                    <a
-                      className={
-                        router.pathname === '/contact'
-                          ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                          : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                      }
-                      onClick={newPathName}
-                      pathname={pathName}>
+                  <Link href='/contact' className={
+                    router.pathname === '/contact'
+                        ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                  }
+                        onClick={newPathName}
+                        pathname={pathName}>
                       Contact
-                    </a>
                   </Link>
                 </div>
               </div>
@@ -112,13 +94,11 @@ export default function Header() {
                   <div className='inline-flex items-center'>
                     <div className='bg-white rounded-full flex'>
                       <Link href='/about'>
-                        <a>
                           <img
                             className='h-10 w-10 rounded-full'
                             src='/images/samK-head.jpeg'
                             alt='Sam Klepper headshot'
                           />
-                        </a>
                       </Link>
                     </div>
                     <a
@@ -163,7 +143,6 @@ export default function Header() {
               <div className='pt-0 pb-3 space-y-1'>
                 {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
                 <Link href='/'>
-                  <a>
                     <Popover.Button
                       as='button'
                       className={
@@ -173,11 +152,9 @@ export default function Header() {
                       }>
                       Home
                     </Popover.Button>
-                  </a>
                 </Link>
 
                 <Link href='/about'>
-                  <a>
                     <Popover.Button
                       as='button'
                       className={
@@ -187,10 +164,8 @@ export default function Header() {
                       }>
                       About
                     </Popover.Button>
-                  </a>
                 </Link>
                 <Link href='/projects'>
-                  <a>
                     <Popover.Button
                       as='button'
                       className={
@@ -205,10 +180,8 @@ export default function Header() {
                       }>
                       Projects
                     </Popover.Button>
-                  </a>
                 </Link>
                 <Link href='/contact'>
-                  <a>
                     <Popover.Button
                       as='button'
                       className={
@@ -218,20 +191,17 @@ export default function Header() {
                       }>
                       Contact
                     </Popover.Button>
-                  </a>
                 </Link>
 
                 <div className='pt-4 pb-3 border-t border-gray-200'>
                   <div className='flex items-center px-4'>
                     <div className='flex-shrink-0'>
                       <Link href='/about'>
-                        <a>
                           <img
                             className='h-10 w-10 rounded-full'
                             src='/images/samK-head.jpeg'
                             alt=''
                           />
-                        </a>
                       </Link>
                     </div>
                     <div className='ml-3'>

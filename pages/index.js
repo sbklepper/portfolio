@@ -52,7 +52,6 @@ function classNames(...classes) {
 }
 
 export default function HomePage({ projects }) {
-  console.log(projects);
 
   const form = useRef();
 
@@ -107,8 +106,7 @@ export default function HomePage({ projects }) {
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                    <Link href="/projects">
-                      <a className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
+                    <Link href="/projects" className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
                         <span>
                           <BriefcaseIcon
                             height={20}
@@ -116,15 +114,12 @@ export default function HomePage({ projects }) {
                           />
                         </span>{" "}
                         Projects
-                      </a>
                     </Link>
-                    <Link href="/contact">
-                      <a className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
+                    <Link href="/contact" className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
                         <span>
                           <MailIcon height={20} className="text-white mr-2" />
                         </span>{" "}
                         Contact
-                      </a>
                     </Link>
                   </div>
                 </div>
@@ -202,10 +197,8 @@ export default function HomePage({ projects }) {
                   </p>
                 </div>
                 <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                  <Link href={link.href}>
-                    <a className="text-base font-medium text-indigo-700 hover:text-indigo-600">
+                  <Link href={link.href}  className="text-base font-medium text-indigo-700 hover:text-indigo-600">
                       Learn more<span aria-hidden="true"> &rarr;</span>
-                    </a>
                   </Link>
                 </div>
               </div>
@@ -236,13 +229,11 @@ export default function HomePage({ projects }) {
               >
                 <div className="flex-shrink-0">
                   <Link href={`/projects/${project.slug}`}>
-                    <a>
                       <img
                         className="h-48 w-full object-cover"
                         src={project.frontmatter.imageUrl}
                         alt={project.frontmatter.title}
                       />
-                    </a>
                   </Link>
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -250,20 +241,17 @@ export default function HomePage({ projects }) {
                     <p className="text-sm font-medium text-indigo-600">
                       {project.frontmatter.category}
                     </p>
-                    <Link href={`/projects/${project.slug}`}>
-                      <a className="block mt-2">
+                    <Link href={`/projects/${project.slug}`}  className="block mt-2">
                         <p className="text-xl font-semibold text-gray-900">
                           {project.frontmatter.title}
                         </p>
                         <p className="mt-3 text-base text-gray-500">
                           {project.frontmatter.excerpt}
                         </p>
-                      </a>
                     </Link>
                   </div>
                   <div className="mt-6 flex justify-center items-center">
                     <Link href={`/projects/${project.slug}`}>
-                      <a>
                         <button
                           type="button"
                           className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -274,7 +262,6 @@ export default function HomePage({ projects }) {
                             aria-hidden="true"
                           />
                         </button>
-                      </a>
                     </Link>
                   </div>
                 </div>

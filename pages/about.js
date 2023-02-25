@@ -224,13 +224,11 @@ export default function AboutPage() {
                   </button>
                 </a>
                 <Link href='/contact'>
-                  <a>
                     <button
                       type='button'
                       className='w-full bg-indigo-50 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-indigo-700 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500'>
                       Contact
                     </button>
-                  </a>
                 </Link>
               </div>
 
