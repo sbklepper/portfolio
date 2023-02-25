@@ -165,7 +165,7 @@ export default function Header() {
                       About
                     </Popover.Button>
                 </Link>
-                <Link href='/projects'>
+                <Link href='/index.tsx'>
                     <Popover.Button
                       as='button'
                       className={

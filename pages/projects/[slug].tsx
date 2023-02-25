@@ -405,7 +405,7 @@ export default function ProjectPage({
           </div>
         </div> */}
         <div className='mx-auto pb-8 w-48'>
-          <Link href='/projects'>
+          <Link href='/index.tsx'>
               <button
                 type='button'
                 className='inline-flex items-center justify-center w-full px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'>

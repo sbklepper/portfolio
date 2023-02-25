@@ -1,4 +1,5 @@
 ---
+id: 4
 title: 'Edge196'
 date: 'April 15, 2021'
 excerpt: 'Cryptocurrency trading, staking and data.'
