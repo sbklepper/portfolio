@@ -1,5 +1,6 @@
-import Layout from '../components/Layout'
 import { Fragment } from 'react'
+import Link from 'next/link'
+import Layout from '../components/Layout'
 import { StarIcon } from '@heroicons/react/solid'
 import {
   SiGitlab,
@@ -20,7 +21,6 @@ import {
 import { FaGitAlt } from 'react-icons/fa'
 import { Tab } from '@headlessui/react'
 import { DocumentDownloadIcon } from '@heroicons/react/outline'
-import Link from 'next/link'
 
 const person = {
   name: 'Sam Klepper',

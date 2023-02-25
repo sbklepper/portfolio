@@ -6,12 +6,12 @@ import { MailIcon } from '@heroicons/react/outline'
 import { SiGitlab, SiGmail, SiLinkedin } from 'react-icons/si'
 
 function resetFields() {
-  document.getElementById('first-name').value = ''
-  document.getElementById('last-name').value = ''
-  document.getElementById('email').value = ''
-  document.getElementById('company').value = ''
-  document.getElementById('phone-number').value = ''
-  document.getElementById('message').value = ''
+  (document.getElementById("first-name") as HTMLInputElement).value = "";
+  (document.getElementById("last-name") as HTMLInputElement).value = "";
+  (document.getElementById("email") as HTMLInputElement).value = "";
+  (document.getElementById("company") as HTMLInputElement).value = "";
+  (document.getElementById("phone-number") as HTMLInputElement).value = "";
+  (document.getElementById("message") as HTMLInputElement).value = "";
 }
 
 export default function ContactPage() {
