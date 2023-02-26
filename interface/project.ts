@@ -1,5 +1,4 @@
 export interface Project {
-    projects: Project[];
     slug: string;
     frontmatter: {
         title: string;
