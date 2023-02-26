@@ -1,5 +1,5 @@
-import Layout from "../../components/Layout";
-import {getProjects} from "../../lib/projects";
+import Layout from "@/components/Layout";
+import {getProjects} from "@/lib/projects";
 import Link from "next/link";
 import {Project} from "@/interface/project";
 

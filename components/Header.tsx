@@ -51,16 +51,14 @@ export default function Header() {
                     router.pathname === '/'
                         ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                  } onClick={newPathName}
-                        pathname={pathName}>
+                  } onClick={newPathName}>
                       Home
                   </Link>
                   <Link href='/about' className={
                     router.pathname === '/about'
                         ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                  } onClick={newPathName}
-                        pathname={pathName}>
+                  } onClick={newPathName}>
                       About
                   </Link>
                   <Link href='/projects' className={
@@ -73,8 +71,7 @@ export default function Header() {
                         ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                   }
-                        onClick={newPathName}
-                        pathname={pathName}>
+                        onClick={newPathName}>
                       Projects
                   </Link>
                   <Link href='/contact' className={
@@ -82,8 +79,7 @@ export default function Header() {
                         ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                   }
-                        onClick={newPathName}
-                        pathname={pathName}>
+                        onClick={newPathName}>
                       Contact
                   </Link>
                 </div>

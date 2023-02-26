@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      {/* Global Site Tag (gtag.ts) - Google Analytics */}
       <Script
         strategy='afterInteractive'
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}

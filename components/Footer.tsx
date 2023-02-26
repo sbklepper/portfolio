@@ -37,11 +37,6 @@ const navigation = {
 
 export default function Footer() {
   const router = useRouter()
-  const [pathName, setPathName] = useState(router.pathname)
-
-  const newPathName = () => {
-    setPathName(router.pathname)
-  }
 
   return (
     <footer className='bg-white'>
