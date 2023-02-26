@@ -1,3 +1,3 @@
 ## Web Dev Portfolio
 
-2022 web dev portfolio using [Next.js](https://nextjs.org/) & [Tailwind](https://tailwindcss.com/).
+Software dev portfolio built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), [Markdown](https://www.markdownguide.org/), & [Tailwind](https://tailwindcss.com/).

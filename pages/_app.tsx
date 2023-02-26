@@ -1,14 +1,16 @@
+import type { AppProps } from "next/app";
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import '../styles/globals.css'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import SimpleReactLightbox from 'simple-react-lightbox'
-import * as gtag from '../lib/gtag'
+import * as gtag from '@/lib/gtag'
 import Script from 'next/script'
+import { ToastContainer } from 'react-toastify'
+import SimpleReactLightbox from 'simple-react-lightbox'
+import '../styles/globals.css'
+import 'react-toastify/dist/ReactToastify.css'
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
+
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url)
@@ -21,7 +23,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      {/* Global Site Tag (gtag.ts) - Google Analytics */}
       <Script
         strategy='afterInteractive'
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -48,5 +50,3 @@ function MyApp({ Component, pageProps }) {
     </>
   )
 }
-
-export default MyApp

@@ -3,7 +3,7 @@ import path from 'path'
 import Link from 'next/link'
 import matter from 'gray-matter'
 import marked from 'marked'
-import Layout from '../../components/Layout'
+import Layout from '@/components/Layout'
 import { useState, Fragment } from 'react'
 import { Tab } from '@headlessui/react'
 import { FaArrowLeft } from 'react-icons/fa'
@@ -405,14 +405,12 @@ export default function ProjectPage({
           </div>
         </div> */}
         <div className='mx-auto pb-8 w-48'>
-          <Link href='/projects'>
-            <a>
+          <Link href='/index.tsx'>
               <button
                 type='button'
                 className='inline-flex items-center justify-center w-full px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'>
                 <FaArrowLeft className='mr-2' /> Go Back
               </button>
-            </a>
           </Link>
         </div>
       </div>

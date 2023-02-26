@@ -1,4 +1,5 @@
 ---
+id: 2
 title: 'WIG Financial Pages'
 date: 'October 16, 2021'
 excerpt: 'Programs information & insurance quoting tool for WealthGuard Financial Pages.'
