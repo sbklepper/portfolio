@@ -1,9 +1,9 @@
 import Layout from "@/components/Layout";
 import {getProjects} from "@/lib/projects";
 import Link from "next/link";
-import {Project} from "@/interface/project";
+import {IProject} from "@/interface/project";
 
-export default function ProjectsPage(projects: { projects: Project[]}) {
+export default function ProjectsPage(projects: { projects: IProject[]}) {
     return (
         <Layout title={"Sam Klepper | Projects"}>
             <div className="relative bg-indigo-800">
