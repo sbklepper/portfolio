@@ -1,8 +1,8 @@
 ---
 id: 7
-title: 'Winfields Chocolate Bar'
+title: "Winfield/'s Chocolate Bar"
 date: 'September 1, 2022'
-excerpt: 'We are all about-us-us fresh, great-tasting food.'
+excerpt: "The Chocolate Bar is Houston's unique, all chocolate alternative."
 imageUrl: '/images/screenshots/bouncing-pixel/Winfields-Screenshot.png'
 techTabImg: '/images/screenshots/ultra-demo/ultra-demo-reviews.png'
 techTabImgAlt: 'Becks Prime Gallery'

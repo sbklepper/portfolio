@@ -10,7 +10,7 @@ techDescription: 'Edge196 offers two native tokens with their own functionality,
 designTabImg: '/images/screenshots/edge196/edge196-design.png'
 designTabImgAlt: 'Edge196 startup solution'
 designDescription: 'Working closely with a UI/UX designer, the layout was kept near pixel perfect to the design handed. Though, varuous libraries were utilized such as Bootstrap and ParticleJS.'
-category: 'Cryptocurrency'
+category: 'Finance'
 repo: 'https://gitlab.com/bklep/3dge'
 link: 'https://3dge.netlify.app'
 tech1: '/images/tech-icons/html-5.png'

@@ -2,7 +2,7 @@
 id: 6
 title: 'Becks Prime'
 date: 'October 1, 2022'
-excerpt: 'We are all about-us-us fresh, great-tasting food.'
+excerpt: "A gourmet hamburger restaurant chain."
 imageUrl: '/images/screenshots/bouncing-pixel/BecksPrime-Screenshot.png'
 techTabImg: '/images/screenshots/ultra-demo/ultra-demo-reviews.png'
 techTabImgAlt: 'Becks Prime Gallery'

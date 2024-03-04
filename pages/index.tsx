@@ -11,7 +11,7 @@ export default function HomePage({projects, projectsForModal}) {
         <Layout>
             <Hero/>
             <About />
-            <Projects projects={projects} projectsForModal={projectsForModal} />
+            <Projects projects={projects} />
             <Contact />
         </Layout>
     );
@@ -21,7 +21,6 @@ export async function getStaticProps() {
     return {
         props: {
             projects: getProjects().slice(0, 3),
-            projectsForModal: getProjects()
         },
     };
 }

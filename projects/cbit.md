@@ -2,11 +2,11 @@
 id: 8
 title: 'CBit Trainer'
 date: 'December 1, 2022'
-excerpt: 'Habit reversal training with psycho-education'
+excerpt: 'Online learning platform for habit reversal training.'
 imageUrl: '/images/screenshots/bouncing-pixel/CBit-Screenshot.png'
 techTabImg: '/images/screenshots/ultra-demo/ultra-demo-reviews.png'
 techTabImgAlt: 'Becks Prime Gallery'
-techDescription: 'One of the requirements was a functioning review system. I utilized MongoDB Atlas as a cloud provider to help create a 5 star rating system with an average score rating functionality. Since the site was primarily a brochure site, I reached for NextJS to serve pre-built static pages making it noticeably fast.'
+techDescription: 'Therapists can create and manage courses...'
 designTabImg: '/images/screenshots/ultra-demo/ultra-demo-gallery.png'
 designTabImgAlt: 'Ultra Demolition custom image gallery & slideshow'
 designDescription: 'They already had an existing logo and color theme, but they needed a way to display their massive collection of 66+ images. I created a custom gallery with a lightbox/slideshow functionality to display thier work. Since they have a strong social media presence, I integrated their FaceBook feed and created a custom social widget for desktop & mobile.'
@@ -25,4 +25,4 @@ tech5: '/images/tech-icons/tailwind.png'
 tech5Name: 'Tailwind'
 ---
 
-**CBit Trainer** is an online learning platform where the user can...
+**CBit Trainer** is an online learning platform where therapists can create and manage courses on how to implement habit reversal training (HRT) for tic disorders.

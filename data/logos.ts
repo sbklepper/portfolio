@@ -32,7 +32,7 @@ export const companyLogos = [
     {
         id: 7,
         src: '/images/logos/wig-logo.png',
-        alt: 'WealthGuard',
+        alt: 'WealthGuard Insurance Group',
     },
     {
         id: 8,
@@ -42,16 +42,16 @@ export const companyLogos = [
     {
         id: 9,
         src: '/images/logos/dss.jpg',
-        alt: 'DeLeon Safety',
+        alt: 'DeLeon Safety Solutions',
     },
     {
         id: 10,
         src: '/images/logos/ud.png',
-        alt: 'Ultra Demo',
+        alt: 'Ultra Demolition',
     },
     {
         id: 11,
         src: '/images/logos/mHawk.png',
-        alt: 'Melissa Hawkins',
+        alt: 'Melissa Hawkins Photography',
     },
 ]
