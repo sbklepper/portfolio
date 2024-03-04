@@ -1,9 +1,9 @@
 ---
-id: 7
-title: 'Winfields Chocolate Bar'
-date: 'September 1, 2022'
+id: 12
+title: 'One Time Close'
+date: 'February 1, 2024'
 excerpt: 'We are all about-us-us fresh, great-tasting food.'
-imageUrl: '/images/screenshots/bouncing-pixel/Winfields-Screenshot.png'
+imageUrl: '/images/screenshots/bouncing-pixel/OTC-Screenshot.png'
 techTabImg: '/images/screenshots/ultra-demo/ultra-demo-reviews.png'
 techTabImgAlt: 'Becks Prime Gallery'
 techDescription: 'One of the requirements was a functioning review system. I utilized MongoDB Atlas as a cloud provider to help create a 5 star rating system with an average score rating functionality. Since the site was primarily a brochure site, I reached for NextJS to serve pre-built static pages making it noticeably fast.'
