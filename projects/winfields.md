@@ -1,18 +1,19 @@
 ---
 id: 7
-title: "Winfield/'s Chocolate Bar"
+title: "Winfield's Chocolate Bar"
 date: 'September 1, 2022'
 excerpt: "The Chocolate Bar is Houston's unique, all chocolate alternative."
-imageUrl: '/images/screenshots/bouncing-pixel/Winfields-Screenshot.png'
-techTabImg: '/images/screenshots/ultra-demo/ultra-demo-reviews.png'
-techTabImgAlt: 'Becks Prime Gallery'
-techDescription: 'One of the requirements was a functioning review system. I utilized MongoDB Atlas as a cloud provider to help create a 5 star rating system with an average score rating functionality. Since the site was primarily a brochure site, I reached for NextJS to serve pre-built static pages making it noticeably fast.'
-designTabImg: '/images/screenshots/ultra-demo/ultra-demo-gallery.png'
+imageUrl: '/images/screenshots/bouncing-pixel/winfields/Winfields-Screenshot.png'
+image2Url: '/images/screenshots/bouncing-pixel/winfields/winfields-locations-screenshot.png'
+techTabImg: '/images/screenshots/bouncing-pixel/winfields/winfields-slider-screenshot.png'
+techTabImgAlt: "Winfield's Product Slider"
+techDescription: "Since the client wanted a way to showcase their products, but stay within their initial theme of a Wes Anderson feel--I utilized a React Slider library called 'Swiper', but customized it to fit their theme with curtains and hands that slide the products. <br /><br />There also is a custom admin dashboard that allows the client to add, edit, and delete products from the slider and products page."
+designTabImg: '/images/screenshots/bouncing-pixel/winfields/winfields-products-screenshot.png'
 designTabImgAlt: 'Ultra Demolition custom image gallery & slideshow'
-designDescription: 'They already had an existing logo and color theme, but they needed a way to display their massive collection of 66+ images. I created a custom gallery with a lightbox/slideshow functionality to display thier work. Since they have a strong social media presence, I integrated their FaceBook feed and created a custom social widget for desktop & mobile.'
+designDescription: 'The design of the application was primarily based around their ever changing product line. I wanted to make sure that the products were the main focus of the site, so I created a custom image gallery and product modal to not only showcase their products, but also link to 3rd party companies to make ordering a breeze.'
 category: 'Food & Hospitality'
 repo: 'https://gitlab.com/bklep/ultra-demolition'
-link: 'https://winfieldscb.com/' 
+link: 'https://winfieldscb.com/'
 tech1: '/images/tech-icons/html-5.png'
 tech1Name: 'HTML'
 tech2: '/images/tech-icons/css-3.png'
@@ -21,8 +22,10 @@ tech3: '/images/tech-icons/next-js.svg'
 tech3Name: 'Next'
 tech4: '/images/tech-icons/mongodb.png'
 tech4Name: 'Mongo'
-tech5: '/images/tech-icons/tailwind.png'
-tech5Name: 'Tailwind'
+tech5: '/images/tech-icons/dotnet.png'
+tech5Name: 'DotNET'
+baseColor: 'winfields-bg'
 ---
 
-**Winfield's Chocolate Bar** is Houston's unique, all chocolate alternative. House made ice cream, chocolates, cakes, pies, cookies, brownies and more!
+**Winfield's Chocolate Bar** is Houston's unique, all chocolate alternative. House made ice cream, chocolates, cakes,
+pies, cookies, brownies and more!

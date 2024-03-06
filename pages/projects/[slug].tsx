@@ -41,6 +41,7 @@ export default function ProjectPage({
     date,
     excerpt,
     imageUrl,
+    image2Url,
     techTabImg,
     techTabImgAlt,
     techDescription,
@@ -59,6 +60,7 @@ export default function ProjectPage({
     tech4Name,
     tech5,
     tech5Name,
+    baseColor,
   },
   content,
 }) {
@@ -83,7 +85,7 @@ export default function ProjectPage({
           <div className='relative'>
             <div className='absolute inset-0 flex flex-col' aria-hidden='true'>
               <div className='flex-1' />
-              <div className='flex-1 w-full bg-gray-700' />
+              <div className={`flex-1 w-full ${baseColor}`} />
             </div>
             <div className='max-w-7xl mx-auto px-4 sm:px-6'>
               <img
@@ -94,7 +96,7 @@ export default function ProjectPage({
             </div>
           </div>
         </div>
-        <div className='bg-gray-700'>
+        <div className={`${baseColor}`}>
           <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
             <h2 className='text-center text-gray-400 text-sm font-semibold uppercase tracking-wide'>
               Technologies used in this project
@@ -222,8 +224,7 @@ export default function ProjectPage({
                         <h3 className='text-lg font-medium text-gray-900'>
                           Tech
                         </h3>
-                        <p className='mt-2 text-md text-gray-500'>
-                          {techDescription}
+                        <p className='mt-2 text-md text-gray-500' dangerouslySetInnerHTML={{__html: techDescription}}>
                         </p>
                       </div>
                       <div className='lg:col-span-7'>
@@ -295,7 +296,7 @@ export default function ProjectPage({
                         <div className='aspect-w-2 aspect-h-1 rounded-lg shadow-2xl bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>
                           <SRLWrapper options={options}>
                             <img
-                              src={imageUrl}
+                              src={image2Url}
                               alt={title}
                               className='object-center object-cover hover:cursor-pointer'
                             />
@@ -408,7 +409,7 @@ export default function ProjectPage({
           <Link href='/projects' passHref={true}>
               <button
                 type='button'
-                className='inline-flex items-center justify-center w-full px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'>
+                className={`inline-flex items-center justify-center w-full px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 ${baseColor}`}>
                 <FaArrowLeft className='mr-2' /> Go Back
               </button>
           </Link>
