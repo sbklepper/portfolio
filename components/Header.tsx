@@ -98,7 +98,7 @@ export default function Header() {
                       </Link>
                     </div>
                     <a
-                      href='/images/resume.pdf'
+                      href='/images/documents/sbk-resume.pdf'
                       target='_blank'
                       rel='noreferrer'>
                       <button
@@ -216,13 +216,13 @@ export default function Header() {
                   </div>
                   <div className='mt-3 space-y-1'>
                     <a
-                      href='/images/resume.pdf'
+                      href='/images/documents/sbk-resume.pdf'
                       target='_blank'
                       rel='noreferrer'>
                       <Popover.Button
                         as='button'
                         className={
-                          router.pathname === '/images/resume.pdf'
+                          router.pathname === '/images/documents/sbk-resume.pdf'
                             ? 'bg-indigo-50 border-indigo-500 text-indigo-700 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
                             : 'border-transparent bg-white text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
                         }>

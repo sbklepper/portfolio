@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Link from 'next/link'
 import { SiGitlab, SiLinkedin, SiGmail } from 'react-icons/si'
 import { DocumentDownloadIcon } from '@heroicons/react/outline'
@@ -29,7 +28,7 @@ const navigation = {
     },
     {
       name: 'Resume',
-      href: '/images/resume.pdf',
+      href: '/images/documents/sbk-resume.pdf',
       icon: DocumentDownloadIcon,
     },
   ],
