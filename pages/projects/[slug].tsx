@@ -61,6 +61,8 @@ export default function ProjectPage({
     tech5,
     tech5Name,
     baseColor,
+    baseTextColor,
+    tailwindColor,
   },
   content,
 }) {
@@ -75,7 +77,7 @@ export default function ProjectPage({
                 <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
                   <span className='block'>{title}</span>
                 </h1>
-                <p className='mt-3 max-w-md mx-auto text-base font-semibold text-indigo-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl'>
+                <p className={`mt-3 max-w-md mx-auto text-base font-semibold ${baseTextColor} sm:text-lg md:mt-5 md:text-xl md:max-w-3xl`}>
                   {category}
                 </p>
               </div>
@@ -137,7 +139,6 @@ export default function ProjectPage({
         </div>
 
         {/* Specifications */}
-
         <div className='bg-white'>
           <section
             aria-labelledby='features-heading'
@@ -167,7 +168,7 @@ export default function ProjectPage({
                         className={({ selected }) =>
                           classNames(
                             selected
-                              ? 'border-indigo-500 text-indigo-600'
+                              ? `border-${tailwindColor}-500 text-${tailwindColor}-600`
                               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
                             'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                           )
@@ -198,19 +199,6 @@ export default function ProjectPage({
                         }>
                         Links
                       </Tab>
-
-                      {/* <Tab
-                        key='Learned'
-                        className={({ selected }) =>
-                          classNames(
-                            selected
-                              ? 'border-indigo-500 text-indigo-600'
-                              : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
-                            'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
-                          )
-                        }>
-                        Learned
-                      </Tab> */}
                     </Tab.List>
                   </div>
                 </div>
@@ -305,106 +293,11 @@ export default function ProjectPage({
                       </div>
                     </div>
                   </Tab.Panel>
-
-                  {/* <Tab.Panel
-                    key='Learned'
-                    className='space-y-16 pt-10 lg:pt-16'>
-                    <div
-                      key='Learned'
-                      className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8'>
-                      <div className='mt-6 lg:mt-0 lg:col-span-5'>
-                        <h3 className='text-lg font-medium text-gray-900'>
-                          Learned
-                        </h3>
-                        <p className='mt-2 text-sm text-gray-500'>Some text</p>
-                      </div>
-                      <div className='lg:col-span-7'>
-                        <div className='aspect-w-2 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>
-                          <img
-                            src='https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-01.jpg'
-                            alt='image 1'
-                            className='object-center object-cover'
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </Tab.Panel> */}
                 </Tab.Panels>
               </Tab.Group>
             </div>
           </section>
         </div>
-
-        {/* <div className='grid grid-cols-1 lg:grid-cols-2 py-8 px-10'>
-          <div className='lg:mx-4 bg-gray-200 rounded-xl shadow-2xl shadow-black px-6 md:px-9 lg:px-11 xl:px-14 py-4 md:py-8 lg:py-10'>
-            <h1 className='text-3xl md:text-4xl font-extrabold py-2 text-center'>
-              About <span className='text-indigo-600'>{title}</span>
-            </h1>
-            <div
-              className='text-md md:text-lg'
-              dangerouslySetInnerHTML={{
-                __html: marked(content),
-              }}></div>
-          </div>
-          <div className='w-full mt-8 lg:mt-0 lg:mx-4 lg:px-8 sm:px-0'>
-            <Tab.Group>
-              <Tab.List className='flex p-1 space-x-1 bg-gray-200 rounded-xl'>
-                {Object.keys(categories).map((category) => (
-                  <Tab
-                    key={category}
-                    className={({ selected }) =>
-                      classNames(
-                        'w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg',
-                        'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
-                        selected
-                          ? 'bg-white shadow'
-                          : 'text-blue-400 hover:bg-white/[0.12] hover:text-blue-500'
-                      )
-                    }>
-                    {category}
-                  </Tab>
-                ))}
-              </Tab.List>
-              <Tab.Panels className='mt-2'>
-                {Object.values(categories).map((posts, idx) => (
-                  <Tab.Panel
-                    key={idx}
-                    className={classNames(
-                      'bg-white rounded-xl p-3',
-                      'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60'
-                    )}>
-                    <ul>
-                      {posts.map((post) => (
-                        <li
-                          key={post.id}
-                          className='relative p-3 rounded-md hover:bg-coolGray-100'>
-                          <h3 className='text-sm font-medium leading-5'>
-                            {post.title}
-                          </h3>
-
-                          <ul className='flex mt-1 space-x-1 text-xs font-normal leading-4 text-coolGray-500 w-full'>
-                            <li>{post.date}</li>
-                            <li>&middot;</li>
-                            <li>{post.commentCount} comments</li>
-                            <li>&middot;</li>
-                            <li>{post.shareCount} shares</li>
-                          </ul>
-
-                          <div
-                            className={classNames(
-                              'absolute inset-0 rounded-md',
-                              'focus:z-10 focus:outline-none focus:ring-2 ring-blue-400'
-                            )}
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  </Tab.Panel>
-                ))}
-              </Tab.Panels>
-            </Tab.Group>
-          </div>
-        </div> */}
         <div className='mx-auto pb-8 w-48'>
           <Link href='/projects' passHref={true}>
               <button
@@ -427,8 +320,6 @@ export async function getStaticPaths() {
       slug: filename.replace('.md', ''),
     },
   }))
-
-  // console.log(paths)
 
   return {
     paths,

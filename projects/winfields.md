@@ -25,6 +25,8 @@ tech4Name: 'Mongo'
 tech5: '/images/tech-icons/dotnet.png'
 tech5Name: 'DotNET'
 baseColor: 'winfields-bg'
+baseTextColor: 'winfields-text'
+tailwindColor: 'green'
 ---
 
 **Winfield's Chocolate Bar** is Houston's unique, all chocolate alternative. House made ice cream, chocolates, cakes,

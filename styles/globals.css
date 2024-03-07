@@ -6,6 +6,22 @@
   background-color: rgb(23, 62, 66);
 }
 
+.winfields-text {
+  color: rgb(23, 62, 66);
+}
+
 button.winfields-bg:hover {
   background-color: rgb(20, 52, 54);
+}
+
+.becks-bg {
+  background-color: rgb(189, 45, 69);
+}
+
+.becks-text {
+  color: rgb(189, 45, 69);
+}
+
+button.becks-bg:hover {
+  background-color: rgb(160, 38, 58);
 }
