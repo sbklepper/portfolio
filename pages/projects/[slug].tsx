@@ -78,6 +78,8 @@ export default function ProjectPage({
         return 'border-green-500 text-green-600'
       case 'red':
         return 'border-red-500 text-red-600'
+      case 'teal':
+        return 'border-teal-500 text-teal-600'
       default:
         return 'border-indigo-500 text-indigo-600'
     }
@@ -121,37 +123,37 @@ export default function ProjectPage({
         {/* Technologies Used */}
         <div className={`${baseColor}`}>
           <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
-            <h2 className='text-center text-gray-400 text-sm font-semibold uppercase tracking-wide'>
+            <h2 className='text-center text-white text-sm font-semibold uppercase tracking-wide'>
               Technologies used in this project
             </h2>
             <div className='mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5'>
               <div className='col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1'>
                 <img className='h-12' src={tech1} alt={tech1Name} />
-                <p className='text-gray-300 font-semibold text-xl ml-2'>
+                <p className='text-white font-semibold text-xl ml-2'>
                   {tech1Name}
                 </p>
               </div>
               <div className='col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1'>
                 <img className='h-12' src={tech2} alt={tech2Name} />
-                <p className='text-gray-300 font-semibold text-xl ml-2'>
+                <p className='text-white font-semibold text-xl ml-2'>
                   {tech2Name}
                 </p>
               </div>
               <div className='col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1'>
                 <img className='h-12' src={tech3} alt={tech3Name} />
-                <p className='text-gray-300 font-semibold text-xl ml-2'>
+                <p className='text-white font-semibold text-xl ml-2'>
                   {tech3Name}
                 </p>
               </div>
               <div className='col-span-1 flex justify-center items-center md:col-span-3 lg:col-span-1'>
                 <img className='h-12' src={tech4} alt={tech4Name} />
-                <p className='text-gray-300 font-semibold text-xl ml-2'>
+                <p className='text-white font-semibold text-xl ml-2'>
                   {tech4Name}
                 </p>
               </div>
               <div className='col-span-2 flex justify-center items-center md:col-span-3 lg:col-span-1'>
                 <img className='h-12' src={tech5} alt={tech5Name} />
-                <p className='text-gray-300 font-semibold text-xl ml-2'>
+                <p className='text-white font-semibold text-xl ml-2'>
                   {tech5Name}
                 </p>
               </div>
@@ -257,8 +259,7 @@ export default function ProjectPage({
                         <h3 className='text-lg font-medium text-gray-900'>
                           Design
                         </h3>
-                        <p className='mt-2 text-md text-gray-500'>
-                          {designDescription}
+                        <p className='mt-2 text-md text-gray-500' dangerouslySetInnerHTML={{__html: designDescription}}>
                         </p>
                       </div>
                       <div className='lg:col-span-7'>

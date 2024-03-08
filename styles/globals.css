@@ -25,3 +25,15 @@ button.winfields-bg:hover {
 button.becks-bg:hover {
   background-color: rgb(160, 38, 58);
 }
+
+.tic-helper-bg {
+  background-color: rgb(128, 206, 217);
+}
+
+.tic-helper-text {
+  color: rgb(128, 206, 217);
+}
+
+button.tic-helper-bg:hover {
+  background-color: rgb(110, 178, 188);
+}
