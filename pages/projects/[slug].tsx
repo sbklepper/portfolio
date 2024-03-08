@@ -66,12 +66,30 @@ export default function ProjectPage({
   },
   content,
 }) {
+
+  /**
+   * Function to handle tailwind color
+   * @param color
+   * @returns string
+   */
+  const handleTailwindColor = (color: string) => {
+    switch (color) {
+      case 'green':
+        return 'border-green-500 text-green-600'
+      case 'red':
+        return 'border-red-500 text-red-600'
+      default:
+        return 'border-indigo-500 text-indigo-600'
+    }
+  }
+
   return (
     <Layout title={`Sam Klepper | ${title}`}>
-      {/* {console.log(content)} */}
       <div className='bg-white mt-20'>
         <div className='relative overflow-hidden'>
           <div className='relative pt-6 pb-16 sm:pb-24'>
+
+            {/* Title Content */}
             <div className='mt-8 md:mt-16 mx-auto max-w-7xl px-4 sm:px-6'>
               <div className='text-center'>
                 <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
@@ -84,6 +102,7 @@ export default function ProjectPage({
             </div>
           </div>
 
+          {/* Image */}
           <div className='relative'>
             <div className='absolute inset-0 flex flex-col' aria-hidden='true'>
               <div className='flex-1' />
@@ -98,6 +117,8 @@ export default function ProjectPage({
             </div>
           </div>
         </div>
+
+        {/* Technologies Used */}
         <div className={`${baseColor}`}>
           <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
             <h2 className='text-center text-gray-400 text-sm font-semibold uppercase tracking-wide'>
@@ -167,10 +188,10 @@ export default function ProjectPage({
                         key='Tech'
                         className={({ selected }) =>
                           classNames(
-                            selected
-                              ? `border-${tailwindColor}-500 text-${tailwindColor}-600`
-                              : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
-                            'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
+                              selected
+                                  ? handleTailwindColor(tailwindColor)
+                                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
+                              'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                           )
                         }>
                         Tech
@@ -180,7 +201,7 @@ export default function ProjectPage({
                         className={({ selected }) =>
                           classNames(
                             selected
-                              ? 'border-indigo-500 text-indigo-600'
+                              ? handleTailwindColor(tailwindColor)
                               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
                             'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                           )
@@ -192,7 +213,7 @@ export default function ProjectPage({
                         className={({ selected }) =>
                           classNames(
                             selected
-                              ? 'border-indigo-500 text-indigo-600'
+                              ? handleTailwindColor(tailwindColor)
                               : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
                             'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                           )
