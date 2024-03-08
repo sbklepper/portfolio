@@ -28,7 +28,7 @@ const navigation = {
     },
     {
       name: 'Resume',
-      href: '/images/documents/sbk-resume.pdf',
+      href: '/images/documents/samuel-klepper-resume.pdf',
       icon: DocumentDownloadIcon,
     },
   ],

@@ -118,7 +118,7 @@ const skills = [
   },
 ]
 const certification = {
-  href: '/images/documents/sbk-resume.pdf',
+  href: '/images/documents/samuel-klepper-resume.pdf',
   summary:
     'Graduated from DigitalCrafts in March of 2020 with a Certification in Full-Stack Web Development.',
   content: `
@@ -213,7 +213,7 @@ export default function AboutPage() {
               {/* <p className='text-gray-500 mt-6'>{person.description}</p> */}
 
               <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2'>
-                <a href='/images/documents/sbk-resume.pdf' target='_blank' rel='noreferrer'>
+                <a href='/images/documents/samuel-klepper-resume.pdf' target='_blank' rel='noreferrer'>
                   <button
                     type='button'
                     className='w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500'>
