@@ -2,7 +2,7 @@
 id: 11
 title: 'FHA Loan'
 date: 'July 1, 2023'
-excerpt: 'The FHA loan program lets you purchase a home with a low down payment and flexible guidelines'
+excerpt: 'Program that lets you purchase a home with a low down payment and flexible guidelines'
 imageUrl: '/images/screenshots/bouncing-pixel/fha-loan/fha-loan-home-screenshot.png'
 image2Url: '/images/screenshots/bouncing-pixel/fha-loan/fha-loan-credit-screenshot.png'
 techTabImg: '/images/screenshots/bouncing-pixel/fha-loan/fha-loan-steps-screenshot.png'

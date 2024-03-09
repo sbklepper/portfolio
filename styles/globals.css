@@ -65,3 +65,15 @@ button.fha-bg:hover,
 button.fha-loan-bg:hover {
   background-color: rgb(41, 69, 90);
 }
+
+.otc-bg {
+  background-color: rgb(110, 45, 18);
+}
+
+.otc-text {
+  color: rgb(110, 45, 18);
+}
+
+button.otc-bg:hover {
+  background-color: rgb(94, 39, 16);
+}
