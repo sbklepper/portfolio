@@ -1,13 +1,17 @@
 import {Fragment, useState} from 'react'
-import {Menu, Popover, Transition} from '@headlessui/react'
-import {DocumentDownloadIcon, MenuIcon, XIcon} from '@heroicons/react/outline'
-import Link from 'next/link'
 import {useRouter} from 'next/router'
+import Link from 'next/link'
+import {Menu, Popover, Transition} from '@headlessui/react'
 import {useTheme} from "next-themes";
+import {DocumentDownloadIcon, MenuIcon, XIcon} from '@heroicons/react/outline'
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
 
-function classNames(...classes) {
+/**
+ * Combines classes into a single string
+ * @param classes
+ */
+function classNames(...classes: any[]) {
     return classes.filter(Boolean).join(' ')
 }
 
@@ -16,7 +20,11 @@ export default function Header() {
     const [pathName, setPathName] = useState(router.pathname)
     const { theme, setTheme } = useTheme()
 
-    const newPathName = () => {
+    /**
+     * Sets the pathName state to the current path
+     * @returns {void}
+     */
+    const newPathName = (): void => {
         setPathName(router.pathname)
     }
 
