@@ -77,3 +77,15 @@ button.fha-loan-bg:hover {
 button.otc-bg:hover {
   background-color: rgb(94, 39, 16);
 }
+
+.super-chef-bg {
+  background-color: rgb(183, 117, 181);
+}
+
+.super-chef-text {
+  color: rgb(183, 117, 181);
+}
+
+button.super-chef-bg:hover {
+  background-color: rgb(156, 100, 155);
+}
