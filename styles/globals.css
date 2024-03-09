@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Projects Branding Colors */
 .winfields-bg {
   background-color: rgb(23, 62, 66);
 }
@@ -48,4 +49,16 @@ button.tic-helper-bg:hover {
 
 button.cbit-bg:hover {
   background-color: rgb(203, 101, 60);
+}
+
+.fha-bg {
+  background-color: rgb(48, 81, 106);
+}
+
+.fha-text {
+  color: rgb(48, 81, 106);
+}
+
+button.fha-bg:hover {
+  background-color: rgb(41, 69, 90);
 }

@@ -82,6 +82,8 @@ export default function ProjectPage({
         return 'border-teal-500 text-teal-600'
       case 'orange':
         return 'border-orange-500 text-orange-600'
+      case 'blue':
+        return 'border-blue-500 text-blue-600'
       default:
         return 'border-indigo-500 text-indigo-600'
     }
