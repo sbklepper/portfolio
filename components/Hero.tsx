@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="">
             {/* Hero card */}
             <div className="relative">
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-white"/>
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-white dark:bg-slate-800"/>
                 <div className="max-w-full   ">
                     <div className="relative shadow-xl  sm:overflow-hidden">
                         <div className="absolute inset-0">
