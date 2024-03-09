@@ -8,8 +8,8 @@ export default function Hero() {
             {/* Hero card */}
             <div className="relative">
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-white dark:bg-slate-800"/>
-                <div className="max-w-full   ">
-                    <div className="relative shadow-xl  sm:overflow-hidden">
+                <div className="max-w-full">
+                    <div className="relative shadow-xl sm:overflow-hidden">
                         <div className="absolute inset-0">
                             <img
                                 className="h-full w-full object-cover"

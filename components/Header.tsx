@@ -67,26 +67,26 @@ export default function Header() {
                                         )}
                                     </Link>
                                 </div>
-                                <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
+                                <div className='hidden sm:ml-6 sm:flex sm:space-x-8 md:space-x-6'>
                                     {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                                     <Link href='/' className={
                                         router.pathname === '/'
                                             ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                                            : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                                            : 'border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                                     } onClick={newPathName}>
                                         Home
                                     </Link>
                                     <Link href='/about' className={
                                         router.pathname === '/about'
                                             ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                                            : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                                            : 'border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                                     } onClick={newPathName}>
                                         About
                                     </Link>
                                     <Link href='/projects' className={
                                         router.pathname.startsWith('/projects')
                                             ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                                            : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                                            : 'border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                                     }
                                           onClick={newPathName}>
                                         Projects
@@ -94,7 +94,7 @@ export default function Header() {
                                     <Link href='/contact' className={
                                         router.pathname === '/contact'
                                             ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
-                                            : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
+                                            : 'border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                                     }
                                           onClick={newPathName}>
                                         Contact
@@ -120,7 +120,7 @@ export default function Header() {
                                             rel='noreferrer'>
                                             <button
                                                 type='button'
-                                                className='inline-flex items-center ml-2 px-2.5 py-1.5 border border-gray-300 shadow-sm text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
+                                                className='inline-flex items-center ml-2 px-2.5 py-1.5 border border-gray-300 dark:border-indigo-700 shadow-sm text-sm font-medium rounded text-gray-700 dark:text-indigo-700 bg-white dark:bg-indigo-400 hover:bg-gray-50 dark:hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
                                                 Resume{' '}
                                                 <span>
                                                     <DocumentDownloadIcon className='h-5 ml-1'/>
@@ -144,7 +144,7 @@ export default function Header() {
                             <div className='-mr-2 flex items-center sm:hidden'>
                                 {/* Mobile menu button */}
                                 <Popover.Button
-                                    className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
+                                    className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
                                     <span className='sr-only'>Open main menu</span>
                                     {open ? (
                                         <XIcon className='block h-6 w-6' aria-hidden='true'/>
@@ -164,7 +164,7 @@ export default function Header() {
                         leave='transition ease-in duration-75'
                         leaveFrom='transform opacity-100 scale-100'
                         leaveTo='transform opacity-0 scale-95'>
-                        <Popover.Panel className='sm:hidden w-full absolute z-10 bg-white rounded-xl border-b-2'>
+                        <Popover.Panel className='sm:hidden w-full absolute z-10 bg-white dark:bg-slate-800 rounded-xl border-b-2 dark:border-indigo-600'>
                             <div className='pt-0 pb-3 space-y-1'>
                                 {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
                                 <Link href='/'>
@@ -172,8 +172,8 @@ export default function Header() {
                                         as='button'
                                         className={
                                             router.pathname === '/'
-                                                ? 'bg-indigo-50 border-indigo-500 text-indigo-700 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
-                                                : 'border-transparent bg-white text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
+                                                ? 'bg-indigo-50 dark:bg-slate-600 border-indigo-500 text-indigo-700 dark:text-indigo-300 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
+                                                : 'border-transparent bg-white dark:bg-slate-800 text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-600 hover:border-gray-300 dark:hover:border-slate-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
                                         }>
                                         Home
                                     </Popover.Button>
@@ -184,8 +184,8 @@ export default function Header() {
                                         as='button'
                                         className={
                                             router.pathname === '/about'
-                                                ? 'bg-indigo-50 border-indigo-500 text-indigo-700 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
-                                                : 'border-transparent bg-white text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
+                                                ? 'bg-indigo-50 dark:bg-slate-600 border-indigo-500 text-indigo-700 dark:text-indigo-300 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
+                                                : 'border-transparent bg-white dark:bg-slate-800 text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-600 hover:border-gray-300 dark:hover:border-slate-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
                                         }>
                                         About
                                     </Popover.Button>
@@ -194,14 +194,9 @@ export default function Header() {
                                     <Popover.Button
                                         as='button'
                                         className={
-                                            router.pathname === '/projects' ||
-                                            router.asPath === `/projects/ultra-demo` ||
-                                            router.asPath === `/projects/wig` ||
-                                            router.asPath === `/projects/wgfps` ||
-                                            router.asPath === `/projects/dds` ||
-                                            router.asPath === `/projects/edge196`
-                                                ? 'bg-indigo-50 border-indigo-500 text-indigo-700 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
-                                                : 'border-transparent bg-white text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
+                                            router.pathname.startsWith('/projects')
+                                                ? 'bg-indigo-50 dark:bg-slate-600 border-indigo-500 text-indigo-700 dark:text-indigo-300 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
+                                                : 'border-transparent bg-white dark:bg-slate-800 text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-600 hover:border-gray-300 dark:hover:border-slate-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
                                         }>
                                         Projects
                                     </Popover.Button>
@@ -211,8 +206,8 @@ export default function Header() {
                                         as='button'
                                         className={
                                             router.pathname === '/contact'
-                                                ? 'bg-indigo-50 border-indigo-500 text-indigo-700 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
-                                                : 'border-transparent bg-white text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
+                                                ? 'bg-indigo-50 dark:bg-slate-600 border-indigo-500 text-indigo-700 dark:text-indigo-300 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
+                                                : 'border-transparent bg-white dark:bg-slate-800 text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-600 hover:border-gray-300 dark:hover:border-slate-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
                                         }>
                                         Contact
                                     </Popover.Button>
@@ -233,7 +228,7 @@ export default function Header() {
                                             <div className='text-base font-medium text-gray-800'>
                                                 Sam Klepper
                                             </div>
-                                            <div className='text-sm font-medium text-gray-500'>
+                                            <div className='text-sm font-medium text-gray-500 dark:text-gray-300'>
                                                 <a
                                                     href='mailto:sam@samklepper.com'
                                                     target='_blank'
@@ -253,7 +248,7 @@ export default function Header() {
                                                 className={
                                                     router.pathname === '/images/documents/samuel-klepper-resume.pdf'
                                                         ? 'bg-indigo-50 border-indigo-500 text-indigo-700 text-left block pl-3 pr-4 py-2 border-l-4 min-w-full'
-                                                        : 'border-transparent bg-white text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
+                                                        : 'border-transparent bg-white dark:bg-slate-800 text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-600 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base text-left font-medium min-w-full'
                                                 }>
                                                 Resume
                                             </Popover.Button>
@@ -263,7 +258,7 @@ export default function Header() {
                                         <button
                                             aria-label='Toggle Dark Mode'
                                             type='button'
-                                            className='md:order-3 mx-auto ml-3'
+                                            className='md:order-3 mx-auto ml-3 mt-3'
                                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
                                             {theme === 'dark' ? (
                                                 <IoSunnyOutline size={24}
