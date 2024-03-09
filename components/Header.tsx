@@ -29,18 +29,34 @@ export default function Header() {
                             <div className='flex'>
                                 <div className='flex-shrink-0 flex items-center'>
                                     <Link href='/'>
-                                        <img
-                                            src='/images/sbk-logo.svg'
-                                            alt="Sam Klepper's logo"
-                                            className='h-12 lg:hidden'
-                                        />
+                                        {theme === 'dark' ? (
+                                            <img
+                                                src='/images/sbk-logo-dark.svg'
+                                                alt="Sam Klepper's logo"
+                                                className='h-12 lg:hidden'
+                                            />
+                                            ) : (
+                                            <img
+                                                src='/images/sbk-logo.svg'
+                                                alt="Sam Klepper's logo"
+                                                className='h-12 lg:hidden'
+                                            />
+                                        )}
                                     </Link>
                                     <Link href='/'>
-                                        <img
-                                            src='/images/sbk-logo.svg'
-                                            alt="Sam Klepper's logo"
-                                            className='h-12 hidden lg:block'
-                                        />
+                                        {theme === 'dark' ? (
+                                            <img
+                                                src='/images/sbk-logo-dark.svg'
+                                                alt="Sam Klepper's logo"
+                                                className='h-12 hidden lg:block'
+                                            />
+                                            ) : (
+                                            <img
+                                                src='/images/sbk-logo.svg'
+                                                alt="Sam Klepper's logo"
+                                                className='h-12 hidden lg:block'
+                                            />
+                                        )}
                                     </Link>
                                 </div>
                                 <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
