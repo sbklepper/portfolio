@@ -6,6 +6,10 @@ import {toast} from "react-toastify";
 export default function Contact() {
     const form = useRef();
 
+    /**
+     * Reset the form fields after the email has been sent
+     * @return void
+     */
     function resetFields() {
         (document.getElementById("first-name") as HTMLInputElement).value = "";
         (document.getElementById("last-name") as HTMLInputElement).value = "";
@@ -15,7 +19,11 @@ export default function Contact() {
         (document.getElementById("message") as HTMLInputElement).value = "";
     }
 
-    const sendEmail = (e) => {
+    /**
+     * Send the email using EmailJS
+     * @param e
+     */
+    const sendEmail = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
 
         emailjs
@@ -39,7 +47,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+        <div className="bg-white dark:bg-slate-800 py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
             <div className="relative max-w-xl mx-auto">
                 {/* SVG dots */}
                 <svg
@@ -64,7 +72,7 @@ export default function Contact() {
                                 y={0}
                                 width={4}
                                 height={4}
-                                className="text-gray-200"
+                                className="text-gray-200 dark:text-gray-600"
                                 fill="currentColor"
                             />
                         </pattern>
@@ -109,10 +117,10 @@ export default function Contact() {
                     />
                 </svg>
                 <div className="text-center">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-indigo-600 sm:text-4xl">
                         Get in Touch
                     </h2>
-                    <p className="mt-4 text-lg leading-6 text-gray-500">
+                    <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
                         Need something fast? Have a unique project in mind? Just want to
                         say hi?
                     </p>
@@ -128,7 +136,7 @@ export default function Contact() {
                         <div>
                             <label
                                 htmlFor="first-name"
-                                className="block text-sm font-medium text-gray-700"
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                             >
                                 First name
                             </label>
@@ -139,14 +147,14 @@ export default function Contact() {
                                     id="first-name"
                                     autoComplete="given-name"
                                     required
-                                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 dark:border-slate-300 rounded-md dark:bg-slate-300"
                                 />
                             </div>
                         </div>
                         <div>
                             <label
                                 htmlFor="last-name"
-                                className="block text-sm font-medium text-gray-700"
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                             >
                                 Last name
                             </label>
@@ -157,14 +165,14 @@ export default function Contact() {
                                     id="last-name"
                                     autoComplete="family-name"
                                     required
-                                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300"
                                 />
                             </div>
                         </div>
                         <div className="sm:col-span-2">
                             <label
                                 htmlFor="company"
-                                className="block text-sm font-medium text-gray-700"
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                             >
                                 Company
                             </label>
@@ -174,14 +182,14 @@ export default function Contact() {
                                     name="company"
                                     id="company"
                                     autoComplete="organization"
-                                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300"
                                 />
                             </div>
                         </div>
                         <div className="sm:col-span-2">
                             <label
                                 htmlFor="email"
-                                className="block text-sm font-medium text-gray-700"
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                             >
                                 Email
                             </label>
@@ -192,7 +200,7 @@ export default function Contact() {
                                     type="email"
                                     autoComplete="email"
                                     required
-                                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                                 />
                             </div>
                         </div>
@@ -200,7 +208,7 @@ export default function Contact() {
                             <div className="flex justify-between">
                                 <label
                                     htmlFor="phone-number"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                                 >
                                     Phone Number
                                 </label>
@@ -219,7 +227,7 @@ export default function Contact() {
                                     id="phone-number"
                                     autoComplete="tel"
                                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                    className="py-3 px-4 block w-full  focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                                    className="py-3 px-4 block w-full  focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                                     placeholder="555-555-5555"
                                     aria-describedby="phone-optional"
                                 />
@@ -228,7 +236,7 @@ export default function Contact() {
                         <div className="sm:col-span-2">
                             <label
                                 htmlFor="message"
-                                className="block text-sm font-medium text-gray-700"
+                                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                             >
                                 Message
                             </label>
@@ -237,7 +245,7 @@ export default function Contact() {
                       id="message"
                       name="message"
                       rows={4}
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                      className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md dark:bg-slate-300"
                       defaultValue={""}
                   />
                             </div>

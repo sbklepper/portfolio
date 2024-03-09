@@ -12,18 +12,18 @@ type Props = {
 export default function Projects({projects}: Props) {
 
     return (
-        <div className="relative bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+        <div className="relative bg-white dark:bg-slate-800 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
             <div className="absolute inset-0">
-                <div className="bg-white h-1/3 sm:h-2/3"/>
+                <div className="bg-white dark:bg-slate-800 h-1/3 sm:h-2/3"/>
             </div>
             <div className="relative max-w-7xl mx-auto">
                 <div className="text-center">
                     <Link href={'/projects'}>
-                        <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+                        <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-indigo-600 sm:text-4xl">
                             Projects
                         </h2>
                     </Link>
-                    <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                    <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-300 sm:mt-4">
                         Here are a few of the latest projects I have worked on.
                     </p>
                 </div>
@@ -32,7 +32,7 @@ export default function Projects({projects}: Props) {
                         <Link href={`/projects/${project.slug}`} key={index} passHref={true}>
                             <div
                                 key={project.frontmatter.title}
-                                className="flex flex-col rounded-lg shadow-xl shadow-gray-600 overflow-hidden hover:shadow-2xl group transform transition duration-500 hover:scale-110"
+                                className="flex flex-col rounded-lg shadow-xl shadow-gray-600 dark:shadow-none overflow-hidden hover:shadow-2xl group transform transition duration-500 hover:scale-110"
                             >
                                 <div className="flex-shrink-0">
                                     <img
@@ -41,15 +41,15 @@ export default function Projects({projects}: Props) {
                                         alt={project.frontmatter.title}
                                     />
                                 </div>
-                                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                                <div className="flex-1 bg-white dark:bg-slate-600 p-6 flex flex-col justify-between">
                                     <div className="flex-1">
-                                        <p className="text-sm font-medium text-indigo-600">
+                                        <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
                                             {project.frontmatter.category}
                                         </p>
                                         <p className="text-xl font-semibold text-gray-900">
                                             {project.frontmatter.title}
                                         </p>
-                                        <p className="mt-3 text-base text-gray-500">
+                                        <p className="mt-3 text-base text-gray-500 dark:text-gray-300">
                                             {project.frontmatter.excerpt}
                                         </p>
                                         {/*</Link>*/}

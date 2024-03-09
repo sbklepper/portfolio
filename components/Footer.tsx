@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { SiGitlab, SiLinkedin, SiGmail } from 'react-icons/si'
 import { DocumentDownloadIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
+import {useTheme} from "next-themes";
 
 const navigation = {
   main: [
@@ -36,16 +37,26 @@ const navigation = {
 
 export default function Footer() {
   const router = useRouter()
+  const { theme, setTheme } = useTheme()
 
   return (
-    <footer className='bg-white'>
+    <footer className='bg-white dark:bg-slate-800'>
       <div className='flex justify-center'>
         <Link href='/'>
-            <img
-              src='/images/sbk-logo.svg'
-              alt="Sam Klepper's Logo"
-              className='h-14'
-            />
+          {theme === 'dark' ? (
+                <img
+                    src='/images/sbk-logo-dark.svg'
+                    alt="Sam Klepper's Logo"
+                    className='h-14'
+                    />
+              ) : (
+              <img
+                  src='/images/sbk-logo.svg'
+                  alt="Sam Klepper's Logo"
+                  className='h-14'
+              />
+            )}
+
         </Link>
       </div>
       <div className='max-w-7xl mx-auto pt-6 pb-12 px-4 overflow-hidden sm:px-6 lg:px-8'>
@@ -57,7 +68,7 @@ export default function Footer() {
               <Link href={item.href} className={
                 router.pathname === item.href
                     ? 'text-md font-medium text-indigo-500'
-                    : 'text-md font-medium text-gray-500 hover:text-gray-900'
+                    : 'text-md font-medium text-gray-500 dark:text-gray-300 hover:text-gray-900'
               }>
                   {item.name}
               </Link>
@@ -69,7 +80,7 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className='text-gray-400 hover:text-gray-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
+              className='text-gray-400 dark:text-gray-300 hover:text-gray-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
               target='_blank'
               rel='noreferrer'>
               <span className='sr-only'>{item.name}</span>
@@ -77,7 +88,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className='mt-8 text-center text-base text-gray-400'>
+        <p className='mt-8 text-center text-base text-gray-400 dark:text-gray-300'>
           &copy; {new Date().getFullYear()} SbK All rights reserved.
         </p>
       </div>

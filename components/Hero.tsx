@@ -51,9 +51,9 @@ export default function Hero() {
             </div>
 
             {/* Company cloud */}
-            <div className="bg-white">
+            <div className="bg-white dark:bg-slate-800">
                 <div className="max-w-7xl mx-auto pt-16 pb-6 px-4 sm:px-6 lg:px-8">
-                    <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+                    <p className="text-center text-sm font-semibold uppercase text-gray-500 dark:text-gray-300 tracking-wide">
                         Some local businesses I&apos;ve worked with
                     </p>
                     <div className="mt-6 pt-10 grid grid-cols-1 gap-8 ">
