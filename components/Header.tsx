@@ -62,12 +62,7 @@ export default function Header() {
                       About
                   </Link>
                   <Link href='/projects' className={
-                    router.pathname === '/projects' ||
-                    router.asPath === `/projects/ultra-demo` ||
-                    router.asPath === `/projects/wig` ||
-                    router.asPath === `/projects/wgfps` ||
-                    router.asPath === `/projects/dds` ||
-                    router.asPath === `/projects/edge196`
+                    router.pathname.startsWith('/projects')
                         ? 'border-indigo-500 text-indigo-500 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium'
                   }

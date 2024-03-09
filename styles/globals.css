@@ -89,3 +89,63 @@ button.otc-bg:hover {
 button.super-chef-bg:hover {
   background-color: rgb(156, 100, 155);
 }
+
+.wgfps-bg {
+  background-color: rgb(47, 102, 228);
+}
+
+.wgfps-text {
+  color: rgb(47, 102, 228);
+}
+
+button.wgfps-bg:hover {
+  background-color: rgb(40, 87, 195);
+}
+
+.goguard-bg {
+  background-color: rgb(172, 43, 35);
+}
+
+.goguard-text {
+  color: rgb(172, 43, 35);
+}
+
+button.goguard-bg:hover {
+  background-color: rgb(147, 37, 30);
+}
+
+.dds-bg {
+  background-color: rgb(200, 222, 75);
+}
+
+.dds-text {
+  color: rgb(200, 222, 75);
+}
+
+button.dds-bg:hover {
+  background-color: rgb(170, 189, 63);
+}
+
+.edge196-bg {
+  background-color: rgb(225, 113, 70);
+}
+
+.edge196-text {
+  color: rgb(225, 113, 70);
+}
+
+button.edge196-bg:hover {
+  background-color: rgb(191, 96, 59);
+}
+
+.ultra-bg {
+  background-color: rgb(75, 132, 238);
+}
+
+.ultra-text {
+  color: rgb(75, 132, 238);
+}
+
+button.ultra-bg:hover {
+  background-color: rgb(64, 113, 204);
+}

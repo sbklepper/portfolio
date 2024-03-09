@@ -4,6 +4,7 @@ title: 'WealthGuard Insurance Group'
 date: 'December 31, 2021'
 excerpt: 'Programs & underwriting information for WealthGuard Insurance Group.'
 imageUrl: '/images/screenshots/goguard/goguard.png'
+image2Url: '/images/screenshots/goguard/goguard.png'
 techTabImg: '/images/screenshots/goguard/goguard-programs.png'
 techTabImgAlt: 'WealthGuard insurance programs'
 techDescription: 'Being that this project was mostly information based, I reached for NextJS to serve static pages and perform fast. There also was a program/data heavy demand that was ever changing, so I utilized a GraphQL infrastructure with GraphCMS. I reached for Markdown to quickly edit/change content as need be, and am serving it via MDXRemote.'
@@ -23,6 +24,9 @@ tech4: '/images/tech-icons/graphql.png'
 tech4Name: 'GraphQL'
 tech5: '/images/tech-icons/tailwind.png'
 tech5Name: 'Tailwind'
+baseColor: 'goguard-bg'
+baseTextColor: 'goguard-text'
+tailwindColor: 'red'
 ---
 
 **WealthGuard Insurance Group** is a local insurance company out of Magnolia, TX. This project was dedicated to their service side of their indusurance business, **GoGuard**, where they advertise their services to Agents & Brokers.

@@ -4,6 +4,7 @@ title: 'DeLeon Safety Solutions'
 date: 'April 15, 2021'
 excerpt: 'Safety training & classes consulting for chemical plants.'
 imageUrl: '/images/screenshots/dds/dds.png'
+image2Url: '/images/screenshots/dds/dds.png'
 techTabImg: '/images/screenshots/dds/dds-tech.png'
 techTabImgAlt: 'Services offered by DeLeon Safety Solutions'
 techDescription: 'Created in React and being primarily information based, the features are kept to a minimum. Styled with Bootstrap and utilizing Google Translate to offer more than 100+ languages to translate their services.'
@@ -23,6 +24,9 @@ tech4: '/images/tech-icons/javascript.png'
 tech4Name: 'JavaScript'
 tech5: '/images/tech-icons/bootstrap.png'
 tech5Name: 'Bootstrap'
+baseColor: 'dds-bg'
+baseTextColor: 'dds-text'
+tailwindColor: 'lime'
 ---
 
 **DeLeon Safety Solutions** is a Houston based business that offers training and safety consulting services for construction and general industry, in both English and Spanish.

@@ -66,7 +66,8 @@ export default function ProjectPage({
   },
   content,
 }) {
-
+console.log('techTabImg', techTabImg)
+console.log('tailwindColor', tailwindColor)
   /**
    * Function to handle tailwind color
    * @param color
@@ -90,6 +91,8 @@ export default function ProjectPage({
         return 'border-amber-500 text-amber-600'
       case 'pink':
         return 'border-pink-500 text-pink-600'
+      case 'lime':
+        return 'border-lime-500 text-lime-600'
       default:
         return 'border-indigo-500 text-indigo-600'
     }
