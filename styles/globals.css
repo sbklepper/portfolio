@@ -37,3 +37,15 @@ button.becks-bg:hover {
 button.tic-helper-bg:hover {
   background-color: rgb(110, 178, 188);
 }
+
+.cbit-bg {
+  background-color: rgb(238, 119, 71);
+}
+
+.cbit-text {
+  color: rgb(238, 119, 71);
+}
+
+button.cbit-bg:hover {
+  background-color: rgb(203, 101, 60);
+}
