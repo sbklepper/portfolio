@@ -22,7 +22,7 @@ export default function Layout({
    urlImage,
 }: LayoutProps) {
     return (
-        <div>
+        <div className={'dark:bg-slate-800'}>
             <Head>
                 <title>{title}</title>
                 <meta name='keywords' content={keywords}/>
