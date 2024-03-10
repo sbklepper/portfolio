@@ -66,8 +66,6 @@ export default function ProjectPage({
   },
   content,
 }) {
-console.log('techTabImg', techTabImg)
-console.log('tailwindColor', tailwindColor)
   /**
    * Function to handle tailwind color
    * @param color
@@ -100,14 +98,14 @@ console.log('tailwindColor', tailwindColor)
 
   return (
     <Layout title={`Sam Klepper | ${title}`}>
-      <div className='bg-white mt-20'>
+      <div className='bg-white dark:bg-slate-800 mt-20'>
         <div className='relative overflow-hidden'>
           <div className='relative pt-6 pb-16 sm:pb-24'>
 
             {/* Title Content */}
             <div className='mt-8 md:mt-16 mx-auto max-w-7xl px-4 sm:px-6'>
               <div className='text-center'>
-                <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
+                <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-300 sm:text-5xl md:text-6xl'>
                   <span className='block'>{title}</span>
                 </h1>
                 <p className={`mt-3 max-w-md mx-auto text-base font-semibold ${baseTextColor} sm:text-lg md:mt-5 md:text-xl md:max-w-3xl`}>
@@ -175,7 +173,7 @@ console.log('tailwindColor', tailwindColor)
         </div>
 
         {/* Specifications */}
-        <div className='bg-white'>
+        <div className='bg-white dark:bg-slate-800'>
           <section
             aria-labelledby='features-heading'
             className='max-w-7xl mx-auto py-16 sm:px-2 lg:px-8'>
@@ -183,10 +181,10 @@ console.log('tailwindColor', tailwindColor)
               <div className='max-w-3xl'>
                 <h2
                   id='features-heading'
-                  className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+                  className='text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl'>
                   Specifications
                 </h2>
-                <p className='mt-4 text-gray-500'>
+                <p className='mt-4 text-gray-500 dark:text-gray-400'>
                   <div
                     className='text-md md:text-lg'
                     dangerouslySetInnerHTML={{
@@ -197,7 +195,7 @@ console.log('tailwindColor', tailwindColor)
 
               <Tab.Group as='div' className='mt-4'>
                 <div className='-mx-4 flex overflow-x-auto sm:mx-0'>
-                  <div className='flex-auto px-4 border-b border-gray-200 sm:px-0'>
+                  <div className='flex-auto px-4 border-b border-gray-200 dark:border-slate-600 sm:px-0'>
                     <Tab.List className='-mb-px flex space-x-10'>
                       <Tab
                         key='Tech'
@@ -205,7 +203,7 @@ console.log('tailwindColor', tailwindColor)
                           classNames(
                               selected
                                   ? handleTailwindColor(tailwindColor)
-                                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
+                                  : 'border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500 dark:hover:border-slate-600',
                               'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                           )
                         }>
@@ -217,7 +215,7 @@ console.log('tailwindColor', tailwindColor)
                           classNames(
                             selected
                               ? handleTailwindColor(tailwindColor)
-                              : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
+                              : 'border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500 hover:border-gray-300 dark:hover:border-slate-600',
                             'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                           )
                         }>
@@ -229,7 +227,7 @@ console.log('tailwindColor', tailwindColor)
                           classNames(
                             selected
                               ? handleTailwindColor(tailwindColor)
-                              : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
+                              : 'border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500 hover:border-gray-300 dark:hover:border-slate-600',
                             'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                           )
                         }>
@@ -245,10 +243,10 @@ console.log('tailwindColor', tailwindColor)
                       key='Tech Info'
                       className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8'>
                       <div className='mt-6 lg:mt-0 lg:col-span-5'>
-                        <h3 className='text-lg font-medium text-gray-900'>
+                        <h3 className='text-lg font-medium text-gray-900 dark:text-gray-300'>
                           Tech
                         </h3>
-                        <p className='mt-2 text-md text-gray-500' dangerouslySetInnerHTML={{__html: techDescription}}>
+                        <p className='mt-2 text-md text-gray-500 dark:text-gray-400' dangerouslySetInnerHTML={{__html: techDescription}}>
                         </p>
                       </div>
                       <div className='lg:col-span-7'>
@@ -269,10 +267,10 @@ console.log('tailwindColor', tailwindColor)
                       key='Design Info'
                       className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8'>
                       <div className='mt-6 lg:mt-0 lg:col-span-5'>
-                        <h3 className='text-lg font-medium text-gray-900'>
+                        <h3 className='text-lg font-medium text-gray-900 dark:text-gray-300'>
                           Design
                         </h3>
-                        <p className='mt-2 text-md text-gray-500' dangerouslySetInnerHTML={{__html: designDescription}}>
+                        <p className='mt-2 text-md text-gray-500 dark:text-gray-400' dangerouslySetInnerHTML={{__html: designDescription}}>
                         </p>
                       </div>
                       <div className='lg:col-span-7'>
@@ -293,13 +291,13 @@ console.log('tailwindColor', tailwindColor)
                       key='Links'
                       className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8'>
                       <div className='mt-6 lg:mt-0 lg:col-span-5'>
-                        <h3 className='text-lg font-medium text-gray-900'>
+                        <h3 className='text-lg font-medium text-gray-900 dark:text-gray-300'>
                           Links
                         </h3>
                         <div className='flex py-2'>
                           <a
                             href={link}
-                            className='text-gray-400 hover:text-blue-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
+                            className='text-gray-400 dark:text-gray-300 hover:text-blue-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
                             target='_blank'
                             rel='noreferrer'>
                             <span className='sr-only'>Website</span>
@@ -307,7 +305,7 @@ console.log('tailwindColor', tailwindColor)
                           </a>
                           <a
                             href={repo}
-                            className='text-gray-400 hover:text-orange-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
+                            className='text-gray-400 dark:text-gray-300 hover:text-orange-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
                             target='_blank'
                             rel='noreferrer'>
                             <span className='sr-only'>GitLab</span>
