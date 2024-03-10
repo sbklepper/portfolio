@@ -61,6 +61,6 @@ Layout.defaultProps = {
     title: 'Sam Klepper | Web Dev & Design',
     keywords: 'Sam Klepper, Samuel Klepper, web development, web design, website design, web developer, website builder, full-stack, web app, web application, React, JavaScript, NextJS, MongoDB, Redux, programming, UI/UX, graphic design, logo design, responsive web design, web development Houston, Houston, TX, affordable website design, web design for small businesses, infographics design services',
     description: 'Sam Klepper is a full-stack web developer residing in Houston, TX',
-    url: 'https://www.samklepper.com',
-    urlImage: 'https://www.samklepper.com/images/circuit-board.jpeg',
+    url: 'https://www.samklep.dev/',
+    urlImage: 'https://www.samklep.dev/images/circuit-board.jpeg',
 }
