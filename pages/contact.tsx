@@ -5,6 +5,10 @@ import { toast } from 'react-toastify'
 import { MailIcon } from '@heroicons/react/outline'
 import { SiGitlab, SiGmail, SiLinkedin } from 'react-icons/si'
 
+/**
+ * Reset the form fields
+ * @returns void
+ */
 function resetFields() {
   (document.getElementById("first-name") as HTMLInputElement).value = "";
   (document.getElementById("last-name") as HTMLInputElement).value = "";
@@ -17,7 +21,11 @@ function resetFields() {
 export default function ContactPage() {
   const form = useRef()
 
-  const sendEmail = (e) => {
+  /**
+   * Sends the email
+   * @param e
+   */
+  const sendEmail = (e: { preventDefault: () => void }) => {
     e.preventDefault()
 
     emailjs
@@ -45,10 +53,10 @@ export default function ContactPage() {
       <div className='pb-24 overflow-hidden mt-20'>
         <div className=''>
           {/* Header */}
-          <div className='bg-white'>
+          <div className='bg-white dark:bg-slate-800'>
             <div className='py-24 lg:py-32'>
               <div className='relative max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8'>
-                <h1 className='text-4xl font-extrabold tracking-tight text-gray-900 text-center sm:text-5xl lg:text-6xl'>
+                <h1 className='text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-300 text-center sm:text-5xl lg:text-6xl'>
                   Contact
                 </h1>
               
@@ -58,10 +66,10 @@ export default function ContactPage() {
 
           {/* Contact section */}
           <section
-            className='relative bg-white'
+            className='relative bg-white dark:bg-slate-800'
             aria-labelledby='contact-heading'>
             <div
-              className='absolute w-full h-1/2 bg-white'
+              className='absolute w-full h-1/2 bg-white dark:bg-slate-800'
               aria-hidden='true'
             />
             {/* Decorative dot pattern */}
@@ -86,7 +94,7 @@ export default function ContactPage() {
                       y={0}
                       width={4}
                       height={4}
-                      className='text-gray-200'
+                      className='text-gray-200 dark:text-gray-500'
                       fill='currentColor'
                     />
                   </pattern>
@@ -99,7 +107,7 @@ export default function ContactPage() {
               </svg>
             </div>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-              <div className='relative bg-white shadow-xl'>
+              <div className='relative bg-white dark:bg-slate-600 shadow-xl'>
                 <h2 id='contact-heading' className='sr-only'>
                   Contact us
                 </h2>
@@ -263,7 +271,7 @@ export default function ContactPage() {
 
                   {/* Contact form */}
                   <div className='py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 shadow-2xl'>
-                    <h3 className='text-lg font-medium text-gray-900'>
+                    <h3 className='text-lg font-medium text-gray-900 dark:text-gray-300'>
                       Send us a message
                     </h3>
                     <form
@@ -273,7 +281,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor='first-name'
-                          className='block text-sm font-medium text-gray-900'>
+                          className='block text-sm font-medium text-gray-900 dark:text-gray-400'>
                           First name
                         </label>
                         <div className='mt-1'>
@@ -283,14 +291,14 @@ export default function ContactPage() {
                             id='first-name'
                             autoComplete='given-name'
                             required
-                            className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md'
+                            className='py-3 px-4 block w-full shadow-sm text-gray-900 dark:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300'
                           />
                         </div>
                       </div>
                       <div>
                         <label
                           htmlFor='last-name'
-                          className='block text-sm font-medium text-gray-900'>
+                          className='block text-sm font-medium text-gray-900 dark:text-gray-400'>
                           Last name
                         </label>
                         <div className='mt-1'>
@@ -300,7 +308,7 @@ export default function ContactPage() {
                             id='last-name'
                             autoComplete='family-name'
                             required
-                            className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md'
+                            className='py-3 px-4 block w-full shadow-sm text-gray-900 dark:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300'
                           />
                         </div>
                       </div>
@@ -316,7 +324,7 @@ export default function ContactPage() {
                             name='company'
                             id='company'
                             autoComplete='organization'
-                            className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md'
+                            className='py-3 px-4 block w-full shadow-sm text-gray-900 dark:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300'
                           />
                         </div>
                       </div>
@@ -324,7 +332,7 @@ export default function ContactPage() {
                         <div className='flex justify-between'>
                           <label
                             htmlFor='phone-number'
-                            className='block text-sm font-medium text-gray-900'>
+                            className='block text-sm font-medium text-gray-900 dark:text-gray-400'>
                             Phone
                           </label>
                           <span
@@ -340,7 +348,7 @@ export default function ContactPage() {
                             id='phone-number'
                             autoComplete='tel'
                             pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
-                            className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
+                            className='py-3 px-4 block w-full shadow-sm text-gray-900 dark:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
                             placeholder='555-555-5555'
                             aria-describedby='phone-optional'
                           />
@@ -349,7 +357,7 @@ export default function ContactPage() {
                       <div className='sm:col-span-2'>
                         <label
                           htmlFor='email'
-                          className='block text-sm font-medium text-gray-900'>
+                          className='block text-sm font-medium text-gray-900 dark:text-gray-400'>
                           Email
                         </label>
                         <div className='mt-1'>
@@ -359,7 +367,7 @@ export default function ContactPage() {
                             type='email'
                             autoComplete='email'
                             required
-                            className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
+                            className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md dark:bg-slate-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500'
                           />
                         </div>
                       </div>
@@ -367,12 +375,12 @@ export default function ContactPage() {
                         <div className='flex justify-between'>
                           <label
                             htmlFor='message'
-                            className='block text-sm font-medium text-gray-900'>
+                            className='block text-sm font-medium text-gray-900 dark:text-gray-400'>
                             Message
                           </label>
                           <span
                             id='message-max'
-                            className='text-sm text-gray-500'>
+                            className='text-sm text-gray-500 dark:text-gray-400'>
                             Max. 500 characters
                           </span>
                         </div>
@@ -381,7 +389,7 @@ export default function ContactPage() {
                             id='message'
                             name='message'
                             rows={4}
-                            className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md'
+                            className='py-3 px-4 block w-full shadow-sm text-gray-900 dark:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md dark:bg-slate-300'
                             aria-describedby='message-max'
                             defaultValue={''}
                           />
