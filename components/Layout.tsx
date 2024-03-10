@@ -3,7 +3,6 @@ import Script from 'next/script'
 import Footer from './Footer'
 import Header from './Header'
 import React from "react";
-import { Analytics } from "@vercel/analytics/react"
 
 type LayoutProps = {
     title: string
@@ -52,7 +51,6 @@ export default function Layout({
             </Head>
             <Header/>
             <main>{children}</main>
-            <Analytics />
             <Script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'/>
             <Footer/>
         </div>
