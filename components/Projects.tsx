@@ -11,6 +11,16 @@ type Props = {
 
 export default function Projects({projects}: Props) {
 
+    /**
+     * Truncates the text to a certain length
+     * @param text
+     * @param length
+     * @returns {string}
+     */
+    const truncateText = (text: string, length: number): string => {
+        return text.length > length ? text.substring(0, length) + '...' : text;
+    }
+
     return (
         <div className="relative bg-white dark:bg-slate-800 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
             <div className="absolute inset-0">
@@ -18,7 +28,7 @@ export default function Projects({projects}: Props) {
             </div>
             <div className="relative max-w-7xl mx-auto">
                 <div className="text-center">
-                    <Link href={'/projects'}>
+                    <Link href={'/projects'} passHref={true}>
                         <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-indigo-600 sm:text-4xl">
                             Projects
                         </h2>
@@ -50,7 +60,7 @@ export default function Projects({projects}: Props) {
                                             {project.frontmatter.title}
                                         </p>
                                         <p className="mt-3 text-base text-gray-500 dark:text-gray-300">
-                                            {project.frontmatter.excerpt}
+                                            {truncateText(project.frontmatter.excerpt, 90)}
                                         </p>
                                         {/*</Link>*/}
                                     </div>

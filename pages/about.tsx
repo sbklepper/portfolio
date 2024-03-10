@@ -156,7 +156,7 @@ export default function AboutPage() {
       </div>
 
       {/* About Section */}
-      <div className='bg-white'>
+      <div className='bg-white dark:bg-slate-800'>
         <div className='mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
           {/* Person */}
           <div className='lg:grid lg:grid-rows-1 lg:grid-cols-7 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16'>
@@ -175,14 +175,14 @@ export default function AboutPage() {
             <div className='max-w-2xl mx-auto mt-14 sm:mt-16 lg:max-w-none lg:mt-0 lg:row-end-2 lg:row-span-2 lg:col-span-3'>
               <div className='flex flex-col-reverse'>
                 <div className='mt-4'>
-                  <h1 className='text-2xl font-extrabold tracking-wide text-gray-900 sm:text-3xl'>
+                  <h1 className='text-2xl font-extrabold tracking-wide text-gray-900 dark:text-indigo-600 sm:text-3xl'>
                     {person.name}
                   </h1>
 
                   <h2 id='information-heading' className='sr-only'>
                     Sam Klepper
                   </h2>
-                  <p className='text-lg text-gray-500 mt-2'>
+                  <p className='text-lg text-gray-500 dark:text-gray-300 mt-2'>
                     {person.position}
                   </p>
                 </div>
@@ -232,9 +232,9 @@ export default function AboutPage() {
                 </Link>
               </div>
 
-              <div className='border-t border-gray-200 mt-10 pt-10'>
-                <h3 className='text-md font-medium text-gray-900'>Skills</h3>
-                <div className='mt-4 prose prose-sm text-gray-500'>
+              <div className='border-t border-gray-200 dark:border-slate-600 mt-10 pt-10'>
+                <h3 className='text-md font-medium text-gray-900 dark:text-gray-400'>Skills</h3>
+                <div className='mt-4 prose prose-sm text-gray-500 dark:text-gray-300'>
                   <ul role='list'>
                     {person.skills.map((skill) => (
                       <li key={skill}>{skill}</li>
@@ -243,11 +243,11 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className='border-t border-gray-200 mt-10 pt-10'>
-                <h3 className='text-md font-medium text-gray-900'>
+              <div className='border-t border-gray-200 dark:border-slate-600 mt-10 pt-10'>
+                <h3 className='text-md font-medium text-gray-900 dark:text-gray-400'>
                   Certifications
                 </h3>
-                <p className='mt-4 text-sm text-gray-500'>
+                <p className='mt-4 text-sm text-gray-500 dark:text-gray-300'>
                   {certification.summary}{' '}
                   <a
                     href={certification.href}
@@ -259,13 +259,13 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className='border-t border-gray-200 mt-10 pt-10'>
-                <h3 className='text-md font-medium text-gray-900'>Social</h3>
+              <div className='border-t border-gray-200 dark:border-slate-600 mt-10 pt-10'>
+                <h3 className='text-md font-medium text-gray-900 dark:text-gray-400'>Social</h3>
                 <ul role='list' className='flex items-center space-x-6 mt-4'>
                   <li>
                     <a
                       href='https://www.linkedin.com/in/samuel-klepper-0435b5193/'
-                      className='flex items-center justify-center w-6 h-6 text-gray-400 hover:text-blue-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
+                      className='flex items-center justify-center w-6 h-6 text-gray-400 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
                       target='_blank'
                       rel='noreferrer'>
                       <span className='sr-only'>LinkedIn</span>
@@ -275,7 +275,7 @@ export default function AboutPage() {
                   <li>
                     <a
                       href='https://gitlab.com/bklep'
-                      className='flex items-center justify-center w-6 h-6 text-gray-400 hover:text-orange-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
+                      className='flex items-center justify-center w-6 h-6 text-gray-400 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
                       target='_blank'
                       rel='noreferrer'>
                       <span className='sr-only'>Gitlab</span>
@@ -285,7 +285,7 @@ export default function AboutPage() {
                   <li>
                     <a
                       href='mailto:sam@samklepper.com'
-                      className='flex items-center justify-center w-6 h-6 text-gray-400 hover:text-red-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
+                      className='flex items-center justify-center w-6 h-6 text-gray-400 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
                       target='_blank'
                       rel='noreferrer'>
                       <span className='sr-only'>Gmail</span>
@@ -298,14 +298,14 @@ export default function AboutPage() {
 
             <div className='w-full max-w-2xl mx-auto mt-16 lg:max-w-none lg:mt-0 lg:col-span-4'>
               <Tab.Group as='div'>
-                <div className='border-b border-gray-200'>
+                <div className='border-b border-gray-200 dark:border-slate-600'>
                   <Tab.List className='-mb-px flex space-x-8'>
                     <Tab
                       className={({ selected }) =>
                         classNames(
                           selected
                             ? 'border-indigo-600 text-indigo-600'
-                            : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300',
+                              : 'border-transparent text-gray-700 dark:text-gray-300 hover:text-gray-800 hover:border-gray-300 dark:hover:border-slate-500',
                           'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                         )
                       }>
@@ -316,7 +316,7 @@ export default function AboutPage() {
                         classNames(
                           selected
                             ? 'border-indigo-600 text-indigo-600'
-                            : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300',
+                            : 'border-transparent text-gray-700 dark:text-gray-300 hover:text-gray-800 hover:border-gray-300 dark:hover:border-slate-500',
                           'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                         )
                       }>
@@ -328,7 +328,7 @@ export default function AboutPage() {
                         classNames(
                           selected
                             ? 'border-indigo-600 text-indigo-600'
-                            : 'border-transparent text-gray-700 hover:text-gray-800 hover:border-gray-300',
+                            : 'border-transparent text-gray-700 dark:text-gray-300 hover:text-gray-800 hover:border-gray-300 dark:hover:border-slate-500',
                           'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                         )
                       }>
@@ -341,23 +341,23 @@ export default function AboutPage() {
                     <h3 className='sr-only'>Bio</h3>
 
                     <div
-                      className='prose prose-lg max-w-none text-gray-500'
+                      className='prose prose-lg max-w-none text-gray-500 dark:text-gray-300'
                       dangerouslySetInnerHTML={{
                         __html: certification.content,
                       }}
                     />
                   </Tab.Panel>
-                  <Tab.Panel as='dl' className='text-sm text-gray-500'>
+                  <Tab.Panel as='dl' className='text-sm text-gray-500 dark:text-gray-300'>
                     <h3 className='sr-only'>Skills</h3>
                     <div className='grid grid-cols-3 gap-y-3 gap-x-6 place-content-center my-3'>
                       {skills.map((skill) => (
                         <Fragment key={skill.name}>
-                          <dd className='mt-5 text-4xl mx-auto font-medium text-center text-gray-900 group transform transition duration-500 hover:scale-110'>
+                          <dd className='mt-5 text-4xl mx-auto font-medium text-center text-gray-900  dark:text-slate-600 group transform transition duration-500 hover:scale-110'>
                             <span className='group-hover:text-sky-600 group-hover:cursor-pointer'>
                               {skill.icon}
                             </span>
 
-                            <dt className='mt-2 text-sm text-gray-500 group-hover:text-sky-600 group-hover:cursor-pointer'>
+                            <dt className='mt-2 text-sm text-gray-500 dark:text-gray-300 group-hover:text-sky-600 group-hover:cursor-pointer'>
                               <p className=''>{skill.name}</p>
                             </dt>
                           </dd>
@@ -372,7 +372,7 @@ export default function AboutPage() {
                     {testimonials.featured.map((review, reviewIdx) => (
                       <div
                         key={review.id}
-                        className='flex text-sm text-gray-500 space-x-4'>
+                        className='flex text-sm text-gray-500 dark:text-gray-300 space-x-4'>
                         <div className='flex-none py-10'>
                           <img
                             src={review.avatarSrc}
@@ -382,13 +382,13 @@ export default function AboutPage() {
                         </div>
                         <div
                           className={classNames(
-                            reviewIdx === 0 ? '' : 'border-t border-gray-200',
+                            reviewIdx === 0 ? '' : 'border-t border-gray-200 dark:border-slate-600',
                             'py-10'
                           )}>
-                          <h3 className='font-semibold text-gray-900'>
+                          <h3 className='font-semibold text-gray-900 dark:text-indigo-500'>
                             {review.author}
                           </h3>
-                          <p className='font-medium text-gray-600'>
+                          <p className='font-medium text-gray-600 dark:text-gray-500'>
                             {review.title}
                           </p>
                           <p>{review.company}</p>
@@ -412,7 +412,7 @@ export default function AboutPage() {
                           </p>
 
                           <div
-                            className='mt-4 prose prose-sm max-w-none text-gray-500'
+                            className='mt-4 prose prose-sm max-w-none text-gray-500 dark:text-gray-300'
                             dangerouslySetInnerHTML={{ __html: review.content }}
                           />
                         </div>

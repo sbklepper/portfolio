@@ -133,7 +133,7 @@ export default function Header() {
                                             className='md:order-3 mx-auto ml-3'
                                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
                                             {theme === 'dark' ? (
-                                                <IoSunnyOutline size={24} className='text-gray-500 hover:text-amber-600'/>
+                                                <IoSunnyOutline size={24} className='text-gray-300 hover:text-amber-600'/>
                                             ) : (
                                                 <IoMoonOutline size={24} className='text-gray-500 hover:text-indigo-600'/>
                                             )}
@@ -262,7 +262,7 @@ export default function Header() {
                                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
                                             {theme === 'dark' ? (
                                                 <IoSunnyOutline size={24}
-                                                                className='text-gray-500 hover:text-amber-600'/>
+                                                                className='text-gray-300 hover:text-amber-600'/>
                                             ) : (
                                                 <IoMoonOutline size={24}
                                                                className='text-gray-500 hover:text-indigo-600'/>
