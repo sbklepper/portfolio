@@ -4,10 +4,10 @@ import {useRouter} from 'next/router'
 import * as gtag from '@/lib/gtag'
 import Script from 'next/script'
 import {ToastContainer} from 'react-toastify'
-import SimpleReactLightbox from 'simple-react-lightbox'
 import {ThemeProvider} from 'next-themes'
 import '../styles/globals.css'
 import 'react-toastify/dist/ReactToastify.css'
+import 'photoswipe/style.css';
 
 export default function MyApp({Component, pageProps}: AppProps) {
     const router = useRouter()
@@ -46,10 +46,8 @@ export default function MyApp({Component, pageProps}: AppProps) {
                 }}
             />
             <ThemeProvider attribute="class">
-                <SimpleReactLightbox>
-                    <Component {...pageProps} />
-                    <ToastContainer/>
-                </SimpleReactLightbox>
+                <Component {...pageProps} />
+                <ToastContainer/>
             </ThemeProvider>
         </>
     )

@@ -9,63 +9,45 @@ import {Tab} from '@headlessui/react'
 import {FaArrowLeft} from 'react-icons/fa'
 import {CgWebsite} from 'react-icons/cg'
 import {SiGitlab} from 'react-icons/si'
-import {SRLWrapper} from 'simple-react-lightbox'
+import Lightbox from "@/components/Lightbox";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-const options = {
-    buttons: {
-        backgroundColor: 'rgba(30,30,36,0.8)',
-        iconColor: 'rgba(255, 255, 255, 0.8)',
-        iconPadding: '10px',
-        showAutoplayButton: false,
-        showCloseButton: true,
-        showDownloadButton: true,
-        showFullscreenButton: true,
-        showNextButton: false,
-        showPrevButton: false,
-        showThumbnailsButton: false,
-        size: '40px',
-    },
-    thumbnails: {
-        showThumbnails: false,
-    },
-}
-
 export default function ProjectPage({
-                                        frontmatter: {
-                                            title,
-                                            category,
-                                            date,
-                                            excerpt,
-                                            imageUrl,
-                                            image2Url,
-                                            techTabImg,
-                                            techTabImgAlt,
-                                            techDescription,
-                                            designTabImg,
-                                            designTabImgAlt,
-                                            designDescription,
-                                            repo,
-                                            link,
-                                            tech1,
-                                            tech1Name,
-                                            tech2,
-                                            tech2Name,
-                                            tech3,
-                                            tech3Name,
-                                            tech4,
-                                            tech4Name,
-                                            tech5,
-                                            tech5Name,
-                                            baseColor,
-                                            baseTextColor,
-                                            tailwindColor,
-                                        },
-                                        content,
-                                    }) {
+    frontmatter: {
+        title,
+        category,
+        date,
+        excerpt,
+        imageUrl,
+        image2Url,
+        techTabImg,
+        techTabImgAlt,
+        techDescription,
+        designTabImg,
+        designTabImgAlt,
+        designDescription,
+        repo,
+        link,
+        tech1,
+        tech1Name,
+        tech2,
+        tech2Name,
+        tech3,
+        tech3Name,
+        tech4,
+        tech4Name,
+        tech5,
+        tech5Name,
+        baseColor,
+        baseTextColor,
+        tailwindColor,
+    },
+    content,
+}) {
+
     /**
      * Function to handle tailwind color
      * @param color
@@ -96,8 +78,10 @@ export default function ProjectPage({
         }
     }
 
-    // Make an array for tab panels with images and descriptions
-    const tabPanels = [
+    /**
+     * Tab Panels array
+     */
+    const tabPanels: ({ key: string; title: string; description: string; repo?: string, image: string; imageAlt: string })[] = [
         {
             key: 'Tech',
             title: 'Tech',
@@ -215,165 +199,33 @@ export default function ProjectPage({
                                         className='text-md md:text-lg'
                                         dangerouslySetInnerHTML={{
                                             __html: marked(content),
-                                        }}></div>
+                                        }}>
+                                    </div>
                                 </p>
                             </div>
 
                             <Tab.Group as='div' className='mt-4'>
-                                {/*<div className='-mx-4 flex overflow-x-auto sm:mx-0'>*/}
-                                {/*  <div className='flex-auto px-4 border-b border-gray-200 dark:border-slate-600 sm:px-0'>*/}
-                                {/*    <Tab.List className='-mb-px flex space-x-10'>*/}
-                                {/*      <Tab*/}
-                                {/*        key='Tech'*/}
-                                {/*        className={({ selected }) =>*/}
-                                {/*          classNames(*/}
-                                {/*              selected*/}
-                                {/*                  ? handleTailwindColor(tailwindColor)*/}
-                                {/*                  : 'border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500 dark:hover:border-slate-600',*/}
-                                {/*              'whitespace-nowrap py-6 border-b-2 font-medium text-sm'*/}
-                                {/*          )*/}
-                                {/*        }>*/}
-                                {/*        Tech*/}
-                                {/*      </Tab>*/}
-                                {/*      <Tab*/}
-                                {/*        key='Design'*/}
-                                {/*        className={({ selected }) =>*/}
-                                {/*          classNames(*/}
-                                {/*            selected*/}
-                                {/*              ? handleTailwindColor(tailwindColor)*/}
-                                {/*              : 'border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500 hover:border-gray-300 dark:hover:border-slate-600',*/}
-                                {/*            'whitespace-nowrap py-6 border-b-2 font-medium text-sm'*/}
-                                {/*          )*/}
-                                {/*        }>*/}
-                                {/*        Design*/}
-                                {/*      </Tab>*/}
-                                {/*      <Tab*/}
-                                {/*        key='Links'*/}
-                                {/*        className={({ selected }) =>*/}
-                                {/*          classNames(*/}
-                                {/*            selected*/}
-                                {/*              ? handleTailwindColor(tailwindColor)*/}
-                                {/*              : 'border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500 hover:border-gray-300 dark:hover:border-slate-600',*/}
-                                {/*            'whitespace-nowrap py-6 border-b-2 font-medium text-sm'*/}
-                                {/*          )*/}
-                                {/*        }>*/}
-                                {/*        Links*/}
-                                {/*      </Tab>*/}
-                                {/*    </Tab.List>*/}
-                                {/*  </div>*/}
-                                {/*</div>*/}
-                                <Tab.List className='flex p-1 space-x-1 bg-gray-200 dark:bg-slate-600 rounded-lg'>
-                                    {tabPanels.map((panel) => (
-                                        <Tab
-                                            key={panel.key}
-                                            className={({selected}) =>
-                                                classNames(
-                                                    selected
-                                                        ? 'bg-white dark:bg-slate-800 shadow-lg text-gray-900 dark:text-gray-300'
-                                                        : 'text-gray-500 dark:text-gray-400',
-                                                    'w-full py-2.5 px-4 text-sm leading-5 font-medium rounded-lg'
-                                                )
-                                            }>
-                                            {panel.title}
-                                        </Tab>
-                                    ))}
-                                </Tab.List>
-
+                                <div className='-mx-4 flex overflow-x-auto sm:mx-0'>
+                                  <div className='flex-auto px-4 border-b border-gray-200 dark:border-slate-600 sm:px-0'>
+                                      <Tab.List className='-mb-px flex space-x-10'>
+                                        {tabPanels.map((panel) => (
+                                            <Tab
+                                                key={panel.key}
+                                                className={({selected}) =>
+                                                    classNames(
+                                                        selected
+                                                            ? handleTailwindColor(tailwindColor)
+                                                            : 'border-transparent text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500 dark:hover:border-slate-600',
+                                                        'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
+                                                    )
+                                                }>
+                                                {panel.title}
+                                            </Tab>
+                                        ))}
+                                    </Tab.List>
+                                  </div>
+                                </div>
                                 <Tab.Panels as={Fragment}>
-                                    {/*<Tab.Panel key='Tech' className='space-y-16 pt-10 lg:pt-16'>*/}
-                                    {/*  <div*/}
-                                    {/*    key='Tech Info'*/}
-                                    {/*    className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8'>*/}
-                                    {/*    <div className='mt-6 lg:mt-0 lg:col-span-5'>*/}
-                                    {/*      <h3 className='text-lg font-medium text-gray-900 dark:text-gray-300'>*/}
-                                    {/*        Tech*/}
-                                    {/*      </h3>*/}
-                                    {/*      <p className='mt-2 text-md text-gray-500 dark:text-gray-400' dangerouslySetInnerHTML={{__html: techDescription}}>*/}
-                                    {/*      </p>*/}
-                                    {/*    </div>*/}
-                                    {/*    <div className='lg:col-span-7'>*/}
-                                    {/*      <div className='aspect-w-2 aspect-h-1 rounded-lg shadow-2xl bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>*/}
-                                    {/*        <SRLWrapper options={options}>*/}
-                                    {/*          <img*/}
-                                    {/*            src={techTabImg}*/}
-                                    {/*            alt={techTabImgAlt}*/}
-                                    {/*            className='object-center object-cover hover:cursor-pointer'*/}
-                                    {/*          />*/}
-                                    {/*        </SRLWrapper>*/}
-                                    {/*      </div>*/}
-                                    {/*    </div>*/}
-                                    {/*  </div>*/}
-                                    {/*</Tab.Panel>*/}
-                                    {/*<Tab.Panel key='Design' className='space-y-16 pt-10 lg:pt-16'>*/}
-                                    {/*  <div*/}
-                                    {/*    key='Design Info'*/}
-                                    {/*    className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8'>*/}
-                                    {/*    <div className='mt-6 lg:mt-0 lg:col-span-5'>*/}
-                                    {/*      <h3 className='text-lg font-medium text-gray-900 dark:text-gray-300'>*/}
-                                    {/*        Design*/}
-                                    {/*      </h3>*/}
-                                    {/*      <p className='mt-2 text-md text-gray-500 dark:text-gray-400' dangerouslySetInnerHTML={{__html: designDescription}}>*/}
-                                    {/*      </p>*/}
-                                    {/*    </div>*/}
-                                    {/*    <div className='lg:col-span-7'>*/}
-                                    {/*      <div className='aspect-w-2 aspect-h-1 rounded-lg shadow-2xl bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>*/}
-                                    {/*        <SRLWrapper options={options}>*/}
-                                    {/*          <img*/}
-                                    {/*            src={designTabImg}*/}
-                                    {/*            alt={designTabImgAlt}*/}
-                                    {/*            className='object-center object-cover hover:cursor-pointer'*/}
-                                    {/*          />*/}
-                                    {/*        </SRLWrapper>*/}
-                                    {/*      </div>*/}
-                                    {/*    </div>*/}
-                                    {/*  </div>*/}
-                                    {/*</Tab.Panel>*/}
-                                    {/*<Tab.Panel key='Links' className='space-y-16 pt-10 lg:pt-16'>*/}
-                                    {/*  <div*/}
-                                    {/*    key='Links'*/}
-                                    {/*    className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8'>*/}
-                                    {/*    <div className='mt-6 lg:mt-0 lg:col-span-5'>*/}
-                                    {/*      <h3 className='text-lg font-medium text-gray-900 dark:text-gray-300'>*/}
-                                    {/*        Links*/}
-                                    {/*      </h3>*/}
-                                    {/*      <div className='flex py-2'>*/}
-                                    {/*        <a*/}
-                                    {/*          href={link}*/}
-                                    {/*          className='text-gray-400 dark:text-gray-300 hover:text-blue-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'*/}
-                                    {/*          target='_blank'*/}
-                                    {/*          rel='noreferrer'>*/}
-                                    {/*          <span className='sr-only'>Website</span>*/}
-                                    {/*          <CgWebsite className='w-8 h-8' />*/}
-                                    {/*        </a>*/}
-                                    {/*        {repo && (*/}
-                                    {/*            <a*/}
-                                    {/*                href={repo}*/}
-                                    {/*                className='text-gray-400 dark:text-gray-300 hover:text-orange-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'*/}
-                                    {/*                target='_blank'*/}
-                                    {/*                rel='noreferrer'>*/}
-                                    {/*              <span className='sr-only'>GitLab</span>*/}
-                                    {/*              <SiGitlab className='w-8 h-8 ml-3'/>*/}
-                                    {/*            </a>*/}
-                                    {/*        )}*/}
-                                    {/*      </div>*/}
-                                    {/*    </div>*/}
-                                    {/*    <div className='lg:col-span-7'>*/}
-                                    {/*      <div*/}
-                                    {/*          className='aspect-w-2 aspect-h-1 rounded-lg shadow-2xl bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>*/}
-                                    {/*        <SRLWrapper options={options}>*/}
-                                    {/*          <img*/}
-                                    {/*              src={image2Url}*/}
-                                    {/*              alt={title}*/}
-                                    {/*              className='object-center object-cover hover:cursor-pointer'*/}
-                                    {/*          />*/}
-                                    {/*        </SRLWrapper>*/}
-                                    {/*      </div>*/}
-                                    {/*    </div>*/}
-                                    {/*  </div>*/}
-                                    {/*</Tab.Panel>*/}
-
-
-
                                     {tabPanels.map((panel) => (
                                         <Tab.Panel key={panel.key} className='space-y-16 pt-10 lg:pt-16'>
                                             {panel.key === 'Links' ? (
@@ -408,13 +260,7 @@ export default function ProjectPage({
                                                     <div className='lg:col-span-7'>
                                                         <div
                                                             className='aspect-w-2 aspect-h-1 rounded-lg shadow-2xl bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>
-                                                            <SRLWrapper options={options}>
-                                                                <img
-                                                                    src={panel.image}
-                                                                    alt={panel.imageAlt}
-                                                                    className='object-center object-cover hover:cursor-pointer'
-                                                                />
-                                                            </SRLWrapper>
+                                                           <Lightbox src={panel.image} alt={panel.imageAlt} width={1200} height={700} />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -422,7 +268,7 @@ export default function ProjectPage({
                                                 <div
                                                     key={panel.key}
                                                     className='flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8'>
-                                                    <div className='mt-6 lg:mt-0 lg:col-span-5'>
+                                                <div className='mt-6 lg:mt-0 lg:col-span-5'>
                                                         <h3 className='text-lg font-medium text-gray-900 dark:text-gray-300'>
                                                             {panel.key}
                                                         </h3>
@@ -433,13 +279,7 @@ export default function ProjectPage({
                                                     <div className='lg:col-span-7'>
                                                         <div
                                                             className='aspect-w-2 aspect-h-1 rounded-lg shadow-2xl bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>
-                                                            <SRLWrapper options={options}>
-                                                                <img
-                                                                    src={panel.image}
-                                                                    alt={panel.imageAlt}
-                                                                    className='object-center object-cover hover:cursor-pointer'
-                                                                />
-                                                            </SRLWrapper>
+                                                            <Lightbox src={panel.image} alt={panel.imageAlt} width={1200} height={700} />
                                                         </div>
                                                     </div>
                                                 </div>
