@@ -12,7 +12,6 @@ designTabImg: '/images/screenshots/bouncing-pixel/becks-prime/becks-instagram-sc
 designTabImgAlt: 'Becks Prime Instagram Feed'
 designDescription: 'Given the history of the company, I wanted to keep the design simple and clean. I used a lot of white space and their existing brand color scheme to keep the focus on the food and the history of the company. I also integrated their Instagram feed to keep the site fresh and up to date.'
 category: 'Food & Hospitality'
-repo: 'https://gitlab.com/bklep/ultra-demolition'
 link: 'https://becksprime.com/'
 tech1: '/images/tech-icons/html-5.png'
 tech1Name: 'HTML'

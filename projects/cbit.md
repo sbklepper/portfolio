@@ -12,7 +12,6 @@ designTabImg: '/images/screenshots/bouncing-pixel/cbit/cbit-training-screenshot.
 designTabImgAlt: 'CBit Trainer training page'
 designDescription: 'The design and layout of the application was based around the idea of providing custom lessons and courses for therapists to create and manage. <br /><br /> The application is designed to be easy to use and navigate, while providing many other features such as consultations via zoom, a social connection forum, past and present webinars and a messaging inbox linked to the users email.'
 category: 'Psychiatry'
-repo: 'https://gitlab.com/bklep/ultra-demolition'
 link: 'https://cbittrainer.com/' 
 tech1: '/images/tech-icons/html-5.png'
 tech1Name: 'HTML'

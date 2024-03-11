@@ -12,7 +12,6 @@ designTabImg: '/images/screenshots/bouncing-pixel/super-chef/super-chef-video-sc
 designTabImgAlt: 'Super Chef Video'
 designDescription: 'The primary focus of the application was centered around the videos. I created a custom video player that would allow the user to watch the videos and navigate through the session, saving their data and inputs for each section. <br /><br />The videos & content were also integrated with a custom admin dashboard that would allow the client to manage the users and their session progress.'
 category: 'Health & Wellness'
-repo: 'https://gitlab.com/bklep/ultra-demolition'
 link: 'https://superchefbcm.com/' 
 tech1: '/images/tech-icons/html-5.png'
 tech1Name: 'HTML'

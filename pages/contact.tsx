@@ -315,7 +315,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor='company'
-                          className='block text-sm font-medium text-gray-900'>
+                          className='block text-sm font-medium text-gray-900 dark:text-gray-400'>
                           Company
                         </label>
                         <div className='mt-1'>
@@ -337,7 +337,7 @@ export default function ContactPage() {
                           </label>
                           <span
                             id='phone-optional'
-                            className='text-sm text-gray-500'>
+                            className='text-sm text-gray-500 dark:text-gray-400'>
                             Optional
                           </span>
                         </div>

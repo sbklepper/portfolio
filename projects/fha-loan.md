@@ -12,7 +12,6 @@ designTabImg: '/images/screenshots/bouncing-pixel/fha-loan/fha-loan-articles-scr
 designTabImgAlt: 'FHA Loan Articles'
 designDescription: 'Another main feature was the articles section. I created a custom admin dashboard that would allow the client to add, edit, and delete articles. The articles would then be displayed on the front end in a custom designed blog.'
 category: 'Real Estate'
-repo: 'https://gitlab.com/bklep/ultra-demolition'
 link: 'https://www.fhaloan.com/' 
 tech1: '/images/tech-icons/html-5.png'
 tech1Name: 'HTML'

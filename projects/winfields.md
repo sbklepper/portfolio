@@ -12,7 +12,6 @@ designTabImg: '/images/screenshots/bouncing-pixel/winfields/winfields-products-s
 designTabImgAlt: 'Ultra Demolition custom image gallery & slideshow'
 designDescription: 'The design of the application was primarily based around their ever changing product line. I wanted to make sure that the products were the main focus of the site, so I created a custom image gallery and product modal to not only showcase their products, but also link to 3rd party companies to make ordering a breeze.'
 category: 'Food & Hospitality'
-repo: 'https://gitlab.com/bklep/ultra-demolition'
 link: 'https://winfieldscb.com/'
 tech1: '/images/tech-icons/html-5.png'
 tech1Name: 'HTML'

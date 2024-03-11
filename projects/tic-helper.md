@@ -12,7 +12,6 @@ designTabImg: '/images/screenshots/bouncing-pixel/tic-helper/tic-helper-register
 designTabImgAlt: 'TicHelper register an account page'
 designDescription: 'The design and layout of the application was based around the idea of providing a way for people to log their current status and practice solutions provided by a licensed psychiatrist.<br /><br />The application is designed to be easy to use and navigate, while providing a way for people to track their progress and complete the outlined therapy program consisting of modules and exercises.'
 category: 'Psychiatry'
-repo: 'https://gitlab.com/bklep/ultra-demolition'
 link: 'https://tichelper.com/' 
 tech1: '/images/tech-icons/html-5.png'
 tech1Name: 'HTML'

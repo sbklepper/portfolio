@@ -303,23 +303,26 @@ export default function ProjectPage({
                             <span className='sr-only'>Website</span>
                             <CgWebsite className='w-8 h-8' />
                           </a>
-                          <a
-                            href={repo}
-                            className='text-gray-400 dark:text-gray-300 hover:text-orange-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
-                            target='_blank'
-                            rel='noreferrer'>
-                            <span className='sr-only'>GitLab</span>
-                            <SiGitlab className='w-8 h-8 ml-3' />
-                          </a>
+                          {repo && (
+                              <a
+                                  href={repo}
+                                  className='text-gray-400 dark:text-gray-300 hover:text-orange-500 transition ease-in-out delay-150 hover:-translate-y-1 duration-300'
+                                  target='_blank'
+                                  rel='noreferrer'>
+                                <span className='sr-only'>GitLab</span>
+                                <SiGitlab className='w-8 h-8 ml-3'/>
+                              </a>
+                          )}
                         </div>
                       </div>
                       <div className='lg:col-span-7'>
-                        <div className='aspect-w-2 aspect-h-1 rounded-lg shadow-2xl bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>
+                        <div
+                            className='aspect-w-2 aspect-h-1 rounded-lg shadow-2xl bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2'>
                           <SRLWrapper options={options}>
                             <img
-                              src={image2Url}
-                              alt={title}
-                              className='object-center object-cover hover:cursor-pointer'
+                                src={image2Url}
+                                alt={title}
+                                className='object-center object-cover hover:cursor-pointer'
                             />
                           </SRLWrapper>
                         </div>
