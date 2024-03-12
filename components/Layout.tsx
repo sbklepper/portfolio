@@ -52,6 +52,7 @@ export default function Layout({
             <Header/>
             <main>{children}</main>
             <Script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'/>
+            <Script src="https://www.google.com/recaptcha/api.js" async defer></Script>
             <Footer/>
         </div>
     )

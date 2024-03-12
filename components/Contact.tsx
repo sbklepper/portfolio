@@ -1,12 +1,10 @@
 import {MailIcon} from "@heroicons/react/outline";
-import {createRef, useRef} from "react";
+import {createRef, useRef, useState} from "react";
 import emailjs from "@emailjs/browser";
 import {toast} from "react-toastify";
-import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
     const form = useRef();
-    const recaptchaRef = createRef(null) ;
 
     /**
      * Reset the form fields after the email has been sent
@@ -27,7 +25,6 @@ export default function Contact() {
      */
     const sendEmail = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        recaptchaRef.current.execute();
         emailjs
             .sendForm(
                 `${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`,
@@ -47,20 +44,6 @@ export default function Contact() {
                 }
             );
     };
-
-    const onReCAPTCHAChange = (captchaCode: any) => {
-        // If the reCAPTCHA code is null or undefined indicating that
-        // the reCAPTCHA was expired then return early
-        if (!captchaCode) {
-            return;
-        }
-        // Else reCAPTCHA was executed successfully so proceed with the
-        // alert
-        toast("🔒 reCAPTCHA executed successfully!")
-        // Reset the reCAPTCHA so that it can be executed again if user
-        // submits another email.
-        recaptchaRef.current.reset();
-    }
 
     return (
         <div className="bg-white dark:bg-slate-800 py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
@@ -266,12 +249,10 @@ export default function Contact() {
                               />
                             </div>
                         </div>
-                        <ReCAPTCHA
-                            ref={recaptchaRef}
-                            size="invisible"
-                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                            onChange={onReCAPTCHAChange}
-                        />
+
+                        {/* Recaptcha */}
+                        <div className="g-recaptcha" data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}></div>
+
                         <div className="sm:col-span-2">
                             <button
                                 type="submit"
@@ -283,9 +264,10 @@ export default function Contact() {
                                         className="ml-3 -mr-1 h-5 w-5"
                                         aria-hidden="true"
                                     />
-                              </span>
+                                </span>
                             </button>
                         </div>
+
                     </form>
                 </div>
             </div>

@@ -395,6 +395,10 @@ export default function ContactPage() {
                           />
                         </div>
                       </div>
+
+                      {/* Recaptcha */}
+                      <div className="g-recaptcha" data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}></div>
+
                       <div className='sm:col-span-2 sm:flex sm:justify-end'>
                         <button
                           type='submit'
