@@ -59,9 +59,9 @@ export default function Layout({
 }
 
 Layout.defaultProps = {
-    title: 'Sam Klepper | Web Dev & Design',
-    keywords: 'Sam Klepper, Samuel Klepper, web development, web design, website design, web developer, website builder, full-stack, web app, web application, React, JavaScript, NextJS, MongoDB, Redux, programming, UI/UX, graphic design, logo design, responsive web design, web development Houston, Houston, TX, affordable website design, web design for small businesses, infographics design services',
-    description: 'Sam Klepper is a full-stack web developer residing in Houston, TX',
+    title: 'Sam Klepper | Full Stack Software Developer',
+    keywords: 'Sam Klepper, Samuel Klepper, samklepdev, software developer, software engineer, web development, web design, website design, web app, application development, web developer, website builder, full-stack, web app, web application, React, JavaScript, NextJS, DotNET, C#, MongoDB, Redux, programming, UI/UX, graphic design, logo design, responsive web design, web development Houston, Houston, TX, Cypress, Texas, affordable website design, web design for small businesses, infographics design services',
+    description: 'Sam Klepper is a full-stack software developer residing in Houston, TX',
     url: 'https://www.samklep.dev/',
     urlImage: 'https://www.samklep.dev/images/circuit-board.jpeg',
 }

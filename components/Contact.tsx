@@ -1,10 +1,22 @@
 import {MailIcon} from "@heroicons/react/outline";
-import {createRef, useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 import emailjs from "@emailjs/browser";
 import {toast} from "react-toastify";
 
 export default function Contact() {
     const form = useRef();
+
+    /**
+     * Load the recaptcha script
+     * @returns void
+     */
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://www.google.com/recaptcha/api.js";
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+    }, []);
 
     /**
      * Reset the form fields after the email has been sent
@@ -36,10 +48,9 @@ export default function Contact() {
                 (result) => {
                     toast("🎉 Message sent!");
                     resetFields();
-                    console.log(result.text);
                 },
                 (error) => {
-                    toast.error(error.text);
+                    toast.error("🚨 Something went wrong!");
                     console.log(error.text);
                 }
             );
