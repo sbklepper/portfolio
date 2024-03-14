@@ -16,7 +16,7 @@ import {
   SiMongodb,
   SiRedux,
   SiPostgresql,
-  SiHeroku,
+  SiHeroku, SiDotnet, SiCsharp, SiTypescript,
 } from 'react-icons/si'
 import { FaGitAlt } from 'react-icons/fa'
 import { Tab } from '@headlessui/react'
@@ -76,6 +76,10 @@ const skills = [
     icon: <SiCss3 />,
   },
   {
+    name: 'TypeScript',
+    icon: <SiTypescript />,
+  },
+  {
     name: 'JS',
     icon: <SiJavascript />,
   },
@@ -90,6 +94,14 @@ const skills = [
   {
     name: 'Next',
     icon: <SiNextdotjs />,
+  },
+  {
+    name: 'C#',
+    icon: <SiCsharp />,
+  },
+  {
+    name: 'DotNET',
+    icon: <SiDotnet />,
   },
   {
     name: 'Redux',
@@ -189,28 +201,11 @@ export default function AboutPage() {
 
                 <div>
                   <h3 className='sr-only'>Testimonials</h3>
-                  {/* <div className='flex items-center'>
-                    {[0, 1, 2, 3, 4].map((rating) => (
-                      <StarIcon
-                        key={rating}
-                        className={classNames(
-                          reviews.average > rating
-                            ? 'text-yellow-400'
-                            : 'text-gray-300',
-                          'h-5 w-5 flex-shrink-0'
-                        )}
-                        aria-hidden='true'
-                      />
-                    ))}{' '}
-                    /5 stars
-                  </div> */}
                   <p className='sr-only'>
                     {testimonials.average} out of 5 stars
                   </p>
                 </div>
               </div>
-
-              {/* <p className='text-gray-500 mt-6'>{person.description}</p> */}
 
               <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2'>
                 <a href='/images/documents/samuel-klepper-resume.pdf' target='_blank' rel='noreferrer'>
@@ -223,7 +218,7 @@ export default function AboutPage() {
                     </span>
                   </button>
                 </a>
-                <Link href='/contact'>
+                <Link href='/contact' passHref={true}>
                     <button
                       type='button'
                       className='w-full bg-indigo-50 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-indigo-700 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500'>
@@ -352,7 +347,7 @@ export default function AboutPage() {
                     <div className='grid grid-cols-3 gap-y-3 gap-x-6 place-content-center my-3'>
                       {skills.map((skill) => (
                         <Fragment key={skill.name}>
-                          <dd className='mt-5 text-4xl mx-auto font-medium text-center text-gray-900  dark:text-slate-600 group transform transition duration-500 hover:scale-110'>
+                          <dd className='mt-5 text-4xl mx-auto font-medium text-center text-gray-900  dark:text-slate-600 group transform transition duration-500 hover:scale-110 flex items-center justify-center flex-col'>
                             <span className='group-hover:text-sky-600 group-hover:cursor-pointer'>
                               {skill.icon}
                             </span>

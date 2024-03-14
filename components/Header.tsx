@@ -67,7 +67,7 @@ export default function Header() {
                                         )}
                                     </Link>
                                 </div>
-                                <div className='hidden sm:ml-6 sm:flex sm:space-x-8 md:space-x-6'>
+                                <div className='hidden sm:ml-6 sm:flex sm:space-x-4 lg:space-x-6'>
                                     {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                                     <Link href='/' className={
                                         router.pathname === '/'
