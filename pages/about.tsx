@@ -26,12 +26,13 @@ const person = {
   name: 'Sam Klepper',
   position: 'Full-Stack Web Developer',
   description:
-    'After initially persuing a degree in Graphic Design, I found my passion for web development. Since graduating from Digital Crafts coding bootcamp in March of 2020, I have helped numerous small businesses get their companies online and consider it a passion of mine. ',
+    'After initially pursuing a degree in Graphic Design, I found my passion for web development. Since graduating from Digital Crafts coding bootcamp in March of 2020, I have helped numerous small businesses get their companies online and consider it a passion of mine.',
   skills: [
-    'Graphic & Logo design',
-    'Full-Stack Web Development',
+    'Full-Stack Software Development',
     'SEO optimized websites & applications',
     'Data driven infrastructure & analytics',
+    'Serverless architecture',
+
   ],
   imageSrc: '/images/sam3-cr.jpg',
 }
@@ -135,9 +136,7 @@ const certification = {
     'Graduated from DigitalCrafts in March of 2020 with a Certification in Full-Stack Web Development.',
   content: `
     <br />
-    <p>Hello. I am Sam. A developer from Houston, TX. I have a passion for all-things-tech and enjoy making websites. After initially persuing a degree in Graphic Design, I found my passion for web development. Since graduating from Digital Crafts coding bootcamp in March of 2020, I have helped numerous small businesses get their companies online and consider it a passion of mine.</p>
-  
-
+    <p>Hello. I am Sam. A developer from Houston, TX. I have a passion for all-things-tech and enjoy making applications. After initially pursuing a degree in Graphic Design, I found my passion for software development. Since graduating from Digital Crafts coding bootcamp in March 2020, I have helped numerous small businesses get their companies online and consider it a passion of mine.</p>
   `,
 }
 
