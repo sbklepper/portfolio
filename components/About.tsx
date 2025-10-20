@@ -1,4 +1,5 @@
 import Link from "next/link";
+// Styles
 import {DatabaseIcon, LightningBoltIcon, SearchIcon} from "@heroicons/react/outline";
 
 const supportLinks = [

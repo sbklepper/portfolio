@@ -1,7 +1,10 @@
-import Layout from '@/components/Layout'
 import {useEffect, useRef} from 'react'
+// Helpers
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
+// Components
+import Layout from '@/components/Layout'
+// Styles
 import { MailIcon } from '@heroicons/react/outline'
 import { SiGitlab, SiGmail, SiLinkedin } from 'react-icons/si'
 

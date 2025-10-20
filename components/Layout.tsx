@@ -1,8 +1,9 @@
+import React from "react";
 import Head from 'next/head'
 import Script from 'next/script'
+// Components
 import Footer from './Footer'
 import Header from './Header'
-import React from "react";
 
 type LayoutProps = {
     title: string
@@ -52,7 +53,6 @@ export default function Layout({
             <Header/>
             <main>{children}</main>
             <Script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'/>
-            <Script src="https://www.google.com/recaptcha/api.js" async defer></Script>
             <Footer/>
         </div>
     )

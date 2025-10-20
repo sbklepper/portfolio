@@ -1,8 +1,10 @@
 import {Fragment, useState} from 'react'
 import {useRouter} from 'next/router'
 import Link from 'next/link'
+// Helpers
 import {Menu, Popover, Transition} from '@headlessui/react'
 import {useTheme} from "next-themes";
+// Styles
 import {DocumentDownloadIcon, MenuIcon, XIcon} from '@heroicons/react/outline'
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";

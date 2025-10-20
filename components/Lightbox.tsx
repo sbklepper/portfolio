@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+// Helpers
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+// Styles
 import 'photoswipe/style.css';
 
 interface Image {

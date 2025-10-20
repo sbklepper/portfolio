@@ -21,6 +21,5 @@ export function getProjects() {
             frontmatter,
         }
     })
-    // console.log(projects)
     return projects.sort(sortByDate)
 }

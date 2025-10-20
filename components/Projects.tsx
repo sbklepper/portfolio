@@ -1,9 +1,8 @@
-import {ExternalLinkIcon} from "@heroicons/react/outline";
-import ProjectsModal from "@/components/ProjectsModal";
-import {useCallback, useState} from "react";
-import {IProject} from "@/interface/project";
 import Link from 'next/link'
-import Image from "next/image";
+// Types
+import {IProject} from "@/interface/project";
+// Styles
+import {ExternalLinkIcon} from "@heroicons/react/outline";
 
 type Props = {
     projects: IProject[]

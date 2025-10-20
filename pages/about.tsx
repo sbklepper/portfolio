@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
+// Components
 import Layout from '@/components/Layout'
+// Styles
 import { StarIcon } from '@heroicons/react/solid'
 import {
   SiGitlab,

@@ -1,6 +1,8 @@
 import Link from "next/link";
-import {BriefcaseIcon, MailIcon} from "@heroicons/react/outline";
+// Components
 import CompanySlider from "@/components/CompanySlider";
+// Styles
+import {BriefcaseIcon, MailIcon} from "@heroicons/react/outline";
 
 export default function Hero() {
     return (

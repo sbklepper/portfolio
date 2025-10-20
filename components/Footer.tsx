@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+// Helpers
+import {useTheme} from "next-themes";
+// Styles
 import { SiGitlab, SiLinkedin, SiGmail } from 'react-icons/si'
 import { DocumentDownloadIcon } from '@heroicons/react/outline'
-import { useRouter } from 'next/router'
-import {useTheme} from "next-themes";
 
 const navigation = {
   main: [

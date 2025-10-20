@@ -1,7 +1,9 @@
-import {MailIcon} from "@heroicons/react/outline";
 import {useEffect, useRef} from "react";
+// Helpers
 import emailjs from "@emailjs/browser";
 import {toast} from "react-toastify";
+// Styles
+import {MailIcon} from "@heroicons/react/outline";
 
 export default function Contact() {
     const form = useRef();
